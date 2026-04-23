@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>General Informatics · Strategy Audit · Talex Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --o:#E85A0C;
+  --o-dim:rgba(232,90,12,0.08);
+  --o-mid:rgba(232,90,12,0.18);
+  --o-border:rgba(232,90,12,0.28);
+  --bg:#F5F2EC;
+  --surface:#FFFFFF;
+  --surface2:#FAF8F5;
+  --border:#E2DDD6;
+  --border-strong:#C8C2BA;
+  --txt:#1A1816;
+  --txt2:#6B625A;
+  --txt3:#A89E96;
+  --green:#2D8C52;
+  --green-bg:#EDF7F2;
+  --green-border:#A8D9BC;
+  --red:#C0392B;
+  --red-bg:#FDF0EE;
+  --red-border:#E8BEBC;
+  --amber:#B07D10;
+  --amber-bg:#FDF7EC;
+  --amber-border:#E0C880;
+}
+
+html{background:var(--bg);color:var(--txt);font-family:'DM Sans',system-ui,sans-serif;font-size:15px;line-height:1.6}
+body{background:var(--bg);min-height:100vh}
+#wrap{max-width:700px;margin:0 auto;padding:0 1.25rem 5rem}
+
+.disp{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1}
+.head{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:0.02em;line-height:1.1}
+.lbl{font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.14em;text-transform:uppercase}
+.italic{font-family:'EB Garamond',Georgia,serif;font-style:italic}
+
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--border)}
+.topbar-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.topbar-logo{height:28px;width:auto}
+.topbar-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.08em;color:var(--txt)}
+.topbar-right{display:flex;align-items:center;gap:12px}
+.topbar-cta{background:var(--o);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 14px;border-radius:6px;text-decoration:none;transition:background 0.15s}
+.topbar-cta:hover{background:#c94d08}
+
+.hero{padding:3rem 0 2.5rem;border-bottom:2px solid var(--o)}
+.hero-step{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;flex-wrap:wrap}
+.step-pill{background:var(--o);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.hero-eyebrow{font-family:'Oswald',sans-serif;font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:var(--txt2)}
+.hero-title{font-size:clamp(40px,8vw,66px);color:var(--txt);margin-bottom:0.5rem}
+.hero-tagline{font-size:clamp(19px,3.5vw,26px);color:var(--o);margin-bottom:1rem}
+.hero-desc{max-width:580px;font-size:14px;color:var(--txt2);line-height:1.8}
+
+.stat-strip{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:8px;background:var(--surface);overflow:hidden;margin:2rem 0}
+.stat-cell{padding:1rem;text-align:center;border-right:1px solid var(--border)}
+.stat-cell:last-child{border-right:none}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:0.04em;color:var(--o)}
+.stat-label{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--txt3);font-family:'Oswald',sans-serif;font-weight:400}
+
+.callout{border-left:3px solid var(--o);padding:1rem 1.25rem;background:var(--surface);border-radius:0 8px 8px 0;margin:1.75rem 0}
+.callout p{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:16px;color:var(--txt);line-height:1.75}
+.callout-attr{margin-top:0.6rem;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--o);font-family:'Oswald',sans-serif;font-weight:500}
+
+.section-intro{margin-bottom:1.25rem}
+.section-intro-row{display:flex;align-items:center;gap:8px;margin-bottom:0.4rem}
+.sec-pill-dark{background:var(--txt);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.sec-pill-orange{background:var(--o);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.section-eyebrow{font-family:'Oswald',sans-serif;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--txt3)}
+.section-title{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:0.02em;line-height:1.1;font-size:22px;color:var(--txt);margin-bottom:0.25rem}
+.section-subtitle{font-size:13px;color:var(--txt3);font-style:italic;font-family:'EB Garamond',Georgia,serif}
+
+.section-block{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin-bottom:1rem}
+.section-block p{font-size:14px;color:var(--txt2);line-height:1.8;margin-bottom:0.9rem}
+.section-block p:last-child{margin-bottom:0}
+.section-block strong{color:var(--txt);font-weight:500}
+
+.audit-step{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--o);border-radius:0 10px 10px 0;padding:1.25rem 1.4rem;margin-bottom:1rem}
+.audit-step-head{display:flex;align-items:center;gap:10px;margin-bottom:0.75rem;flex-wrap:wrap}
+.audit-step-num{width:30px;height:30px;border-radius:50%;background:var(--o-dim);border:1.5px solid var(--o);color:var(--o);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;flex-shrink:0}
+.audit-step-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--txt);letter-spacing:0.04em;text-transform:uppercase}
+.audit-step-source{margin-left:auto;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:0.06em;color:var(--txt3);text-transform:lowercase}
+.audit-step p{font-size:13.5px;color:var(--txt2);line-height:1.75;margin-bottom:0.75rem}
+.audit-step p:last-child{margin-bottom:0}
+.audit-step strong{color:var(--txt);font-weight:500}
+
+.rule{height:1px;background:var(--border);border:none;margin:1.5rem 0}
+.rule-orange{height:2px;background:var(--o);border:none;margin:2.5rem 0}
+
+.gap-item{display:flex;gap:13px;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border)}
+.gap-item:first-child{padding-top:0}
+.gap-item:last-child{border-bottom:none;padding-bottom:0}
+.gap-badge{padding:3px 8px;border-radius:4px;font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;flex-shrink:0;margin-top:2px;white-space:nowrap}
+.gap-badge.critical{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)}
+.gap-badge.moderate{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-border)}
+.gap-badge.strength{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border)}
+.gap-title{font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;color:var(--txt);margin-bottom:3px;letter-spacing:0.02em}
+.gap-desc{font-size:13px;color:var(--txt2);line-height:1.65}
+
+.deliverable{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:1rem;overflow:hidden}
+.del-header{display:flex;align-items:center;gap:12px;padding:1rem 1.4rem;border-bottom:1px solid var(--border);background:var(--surface2)}
+.del-num{width:28px;height:28px;border-radius:50%;background:var(--o);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:15px;flex-shrink:0}
+.del-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;color:var(--txt);letter-spacing:0.04em}
+.del-body{padding:1.25rem 1.4rem}
+.del-body p{font-size:13.5px;color:var(--txt2);line-height:1.75;margin-bottom:0.7rem}
+.del-body p:last-child{margin-bottom:0}
+.del-body ul{list-style:none;padding:0;margin:0.4rem 0 0}
+.del-body li{font-size:13.5px;color:var(--txt2);line-height:1.7;padding:6px 0 6px 18px;position:relative}
+.del-body li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:2px;background:var(--o)}
+
+.case-card{background:var(--txt);border-radius:12px;padding:1.5rem 1.5rem 1.75rem;margin-bottom:1rem;color:#fff;overflow:hidden}
+.cs-label{font-family:'Oswald',sans-serif;font-weight:500;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--o);margin-bottom:0.5rem}
+.cs-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,42px);letter-spacing:0.03em;line-height:1;color:#fff;margin-bottom:1.1rem}
+.cs-stat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1.25rem}
+.cs-stat-cell{background:rgba(255,255,255,0.04);border-top:2px solid var(--o);padding:0.75rem 0.6rem 0.65rem}
+.cs-stat-num{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:0.03em;color:var(--o);line-height:1.05}
+.cs-stat-label{font-size:10px;color:rgba(255,255,255,0.55);line-height:1.35;margin-top:2px}
+.cs-section{border-left:3px solid var(--o);padding:0.5rem 0 0.5rem 0.85rem;margin-bottom:0.9rem}
+.cs-section:last-child{margin-bottom:0}
+.cs-section-label{font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--o);margin-bottom:0.35rem}
+.cs-section-body{font-size:13px;color:rgba(255,255,255,0.78);line-height:1.7}
+.cs-footer-meta{margin-top:1.1rem;padding-top:0.9rem;border-top:1px solid rgba(255,255,255,0.1);font-size:11px;color:rgba(255,255,255,0.45);font-family:'Oswald',sans-serif;letter-spacing:0.06em;text-align:center}
+
+.cred-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.25rem}
+.cred-chip{padding:6px 12px;border:1px solid var(--o-border);background:var(--o-dim);border-radius:4px;font-family:'Oswald',sans-serif;font-weight:500;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--o)}
+
+.byline{display:flex;gap:14px;align-items:center;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin:1.5rem 0}
+.byline-avatar{width:52px;height:52px;border-radius:50%;background:var(--o-dim);border:2px solid var(--o);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--o);flex-shrink:0}
+.byline-body{flex:1;min-width:0}
+.byline-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--txt);letter-spacing:0.03em}
+.byline-sub{font-size:12px;color:var(--txt2);line-height:1.5;margin-top:2px}
+
+.cta-block{background:var(--txt);border-radius:12px;padding:2.25rem 1.75rem;margin-top:2rem;text-align:center}
+.cta-eyebrow{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,90,12,0.9);font-family:'Oswald',sans-serif;font-weight:500;margin-bottom:0.75rem}
+.cta-headline{font-size:clamp(28px,5vw,44px);color:#fff;margin-bottom:0.6rem}
+.cta-sub{font-size:13.5px;color:rgba(255,255,255,0.65);line-height:1.75;max-width:480px;margin:0 auto 1.75rem}
+.cta-primary{display:inline-block;background:var(--o);color:#fff;padding:14px 30px;border-radius:8px;font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.15s,transform 0.1s}
+.cta-primary:hover{background:#c94d08}
+.cta-primary:active{transform:scale(0.98)}
+.cta-reply{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.08);font-size:13px;color:rgba(255,255,255,0.55);font-family:'EB Garamond',Georgia,serif;font-style:italic;line-height:1.6}
+
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:8px}
+.faq-q{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--txt);margin-bottom:6px;letter-spacing:0.02em}
+.faq-a{font-size:13px;color:var(--txt2);line-height:1.7}
+
+.site-footer{margin-top:3rem;padding:1.5rem 0 1rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.08em;color:var(--txt2)}
+.footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:var(--txt3);text-decoration:none;letter-spacing:0.06em;font-family:'Oswald',sans-serif;text-transform:uppercase}
+.footer-links a:hover{color:var(--o)}
+.footer-copy{font-size:11px;color:var(--txt3);width:100%}
+
+.dim-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:8px;display:flex;align-items:flex-start;gap:14px}
+.dim-num{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--o);line-height:1;margin-top:2px;min-width:28px}
+.dim-body{flex:1;min-width:0}
+.dim-head{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.dim-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;color:var(--txt);letter-spacing:0.04em;text-transform:uppercase}
+.dim-badge{padding:2px 7px;border-radius:3px;font-family:'Oswald',sans-serif;font-weight:600;font-size:9px;letter-spacing:0.1em;text-transform:uppercase}
+.dim-badge.strong{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border)}
+.dim-badge.partial{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-border)}
+.dim-badge.critical{background:var(--red-bg);color:var(--red);border:1px solid var(--red-border)}
+.dim-desc{font-size:13px;color:var(--txt2);line-height:1.7}
+
+.concept-card{background:var(--txt);border-radius:12px;padding:1.75rem 1.5rem;margin-bottom:1rem;color:#fff}
+.concept-eyebrow{font-family:'Oswald',sans-serif;font-weight:500;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--o);margin-bottom:0.5rem}
+.concept-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(30px,5vw,40px);letter-spacing:0.03em;line-height:1.05;color:#fff;margin-bottom:1rem}
+.concept-logline{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:16px;color:rgba(255,255,255,0.85);line-height:1.65;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+.concept-row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:0.75rem 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.concept-row:last-child{border-bottom:none;padding-bottom:0}
+.concept-label{font-family:'Oswald',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--o);padding-top:3px}
+.concept-value{font-size:13px;color:rgba(255,255,255,0.78);line-height:1.7}
+.concept-value strong{color:#fff;font-weight:500}
+
+@media print{
+  body{background:#fff}
+  .topbar-cta,.cta-primary{display:none}
+}
+</style>
+</head>
+<body>
+<div id="wrap">
+
+  <nav class="topbar">
+    <a class="topbar-brand" href="https://www.talexmedia.com" target="_blank">
+      <img class="topbar-logo"
+        src="https://static.wixstatic.com/media/3c6878_456d81e9cdb84e6c8bb3260ebfcc0523~mv2.png"
+        alt="Talex Media"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'"
+      />
+      <span class="topbar-name" style="display:none">TALEX MEDIA</span>
+    </a>
+    <div class="topbar-right">
+      <a class="topbar-cta" href="https://calendly.com/talextom/touching-base" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-step">
+      <div class="step-pill">Strategy Audit For General Informatics</div>
+      <span class="hero-eyebrow">Don Monistere · Prepared April 2026</span>
+    </div>
+    <h1 class="disp hero-title">A Custom Look<br/>At Your Content Presence</h1>
+    <div class="italic hero-tagline">Three books of authority. Zero video on the website. Here's the opportunity.</div>
+    <p class="hero-desc">Don, after spending time with General Informatics across LinkedIn, geninf.com, and the broader public footprint, here is the outside-in read. Not a pitch. What we actually saw, where the biggest authority opportunities sit, and what a fifteen-minute conversation could unlock.</p>
+  </header>
+
+  <div class="stat-strip">
+    <div class="stat-cell">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Offices Across LA, AL, NC, TX</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Books Published Since 2017</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Videos On geninf.com</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>"It's not just a phone number. That means the world to me, that I'm able to talk to a human, explain what's going on, and they are going to take care of my problem."</p>
+    <div class="callout-attr">Debbie Hightower, CAO · LeBlanc Pediatrics · geninf.com</div>
+  </div>
+
+  <div class="byline">
+    <div class="byline-avatar">TL</div>
+    <div class="byline-body">
+      <div class="byline-name">Prepared by Tom Langan · Founder, Talex Media</div>
+      <div class="byline-sub">2x Emmy Nominee · 25 years · BBC, Discovery, NBC Universal</div>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- 01 THE AUDIT -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">01</span>
+      <span class="section-eyebrow">The Audit</span>
+    </div>
+    <h2 class="section-title">What We Looked At</h2>
+    <p class="section-subtitle">A pass across General Informatics' public footprint: LinkedIn, website, and broader digital presence.</p>
+  </div>
+
+  <div class="section-block">
+    <p>Hi Don, my name is Tom Langan. I'm the founder of Talex Media, and before this I spent 25 years directing content for the BBC, Discovery, and NBC Universal.</p>
+    <p>What follows is an outside-in read on General Informatics' content presence. It's not a pitch. It's what we actually saw after time with your channels, and where we'd start if we were working together.</p>
+  </div>
+
+  <div class="audit-step">
+    <div class="audit-step-head">
+      <div class="audit-step-num">1</div>
+      <div class="audit-step-title">LinkedIn</div>
+      <div class="audit-step-source">linkedin.com/in/donaldmonistere</div>
+    </div>
+    <p>Your personal profile reads like a CEO with conviction. Three published books in the Enhanced trilogy. XChange NexGen Advisory Board. 2022 Distinguished College of Business Alumnus at Southeastern Louisiana. You've built serious authority in print.</p>
+    <p>General Informatics' company page covers the fundamentals cleanly: seven locations, the verticals called out, the GI Watch, Guard, Protect, and Shield+ bundles articulated.</p>
+    <p><strong>What's missing:</strong> the voice behind the writing. No video posts from you, no company updates with the CEO on camera. For a 3x author and board-appointed speaker, that channel is very quiet.</p>
+  </div>
+
+  <div class="audit-step">
+    <div class="audit-step-head">
+      <div class="audit-step-num">2</div>
+      <div class="audit-step-title">geninf.com</div>
+      <div class="audit-step-source">geninf.com</div>
+    </div>
+    <p>"Complex IT Made Simple" is a strong promise. Service architecture is clear: four named bundles, six verticals, seven offices. The case studies (Baton Rouge Chamber, ThreatWatch, Hissho Sushi) are real and specific. Debbie Hightower's testimonial is the single most compelling line on the homepage.</p>
+    <p><strong>What's missing:</strong> every case study is text. Every testimonial is text. There is not a single video on geninf.com, and the "Get to Know the CEO" page has no video of you.</p>
+  </div>
+
+  <div class="audit-step">
+    <div class="audit-step-head">
+      <div class="audit-step-num">3</div>
+      <div class="audit-step-title">The Broader Footprint</div>
+      <div class="audit-step-source">itstrategy.tech · youtube · ig</div>
+    </div>
+    <p>The IT Strategy Tech blog is running on a second domain. Well-written, consistent cadence, but the authority it builds does not pull back into the flagship brand. YouTube: no channel surfaced. Instagram: not linked. X and Facebook are there but light.</p>
+    <p><strong>What's missing:</strong> you have been publishing books since 2017 and speaking through board positions since 2022. The video version of that thought leadership does not yet exist.</p>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- 02 FIVE DIMENSIONS -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">02</span>
+      <span class="section-eyebrow">The Five Dimensions</span>
+    </div>
+    <h2 class="section-title">How General Informatics Reads On Our Audit Lens</h2>
+    <p class="section-subtitle">The same five dimensions we walk through in-person, applied to your public presence from the outside.</p>
+  </div>
+
+  <div class="dim-card">
+    <div class="dim-num">01</div>
+    <div class="dim-body">
+      <div class="dim-head">
+        <span class="dim-title">Audience Clarity</span>
+        <span class="dim-badge partial">Partial</span>
+      </div>
+      <div class="dim-desc">Your site speaks clearly to procurement, service bundles, compliance, office locations. What's less clear is which human inside the buying org is being spoken to. A CISO at a regional bank, a superintendent at a school district, and a harbormaster at a port all need different things. The positioning does not yet distinguish.</div>
+    </div>
+  </div>
+  <div class="dim-card">
+    <div class="dim-num">02</div>
+    <div class="dim-body">
+      <div class="dim-head">
+        <span class="dim-title">Authenticity &amp; Voice</span>
+        <span class="dim-badge critical">Critical</span>
+      </div>
+      <div class="dim-desc">Your voice is one of the strongest assets GI has. Three books, decades on panels, published opinions. And it is completely absent from the company's content. geninf.com has the voice of a vendor. Your LinkedIn has the voice of an author. The space between those two is where the opportunity is.</div>
+    </div>
+  </div>
+  <div class="dim-card">
+    <div class="dim-num">03</div>
+    <div class="dim-body">
+      <div class="dim-head">
+        <span class="dim-title">Storytelling Power</span>
+        <span class="dim-badge partial">Partial</span>
+      </div>
+      <div class="dim-desc">Baton Rouge Chamber, ThreatWatch, Hissho Sushi, these are real, named stories with real transformations. But they are delivered as case-study text: setup, approach, result, in paragraph form. The human drama is implied, not shown. Debbie's quote hints at what the film version could be.</div>
+    </div>
+  </div>
+  <div class="dim-card">
+    <div class="dim-num">04</div>
+    <div class="dim-body">
+      <div class="dim-head">
+        <span class="dim-title">Generosity &amp; Value</span>
+        <span class="dim-badge strong">Strong</span>
+      </div>
+      <div class="dim-desc">The three books, the itstrategy.tech blog, and the service depth on geninf.com all signal a brand willing to teach. This is your strongest dimension. The gift here is the video form of what you are already publishing in print.</div>
+    </div>
+  </div>
+  <div class="dim-card">
+    <div class="dim-num">05</div>
+    <div class="dim-body">
+      <div class="dim-head">
+        <span class="dim-title">Consistency &amp; Systems</span>
+        <span class="dim-badge partial">Partial</span>
+      </div>
+      <div class="dim-desc">Blog cadence on itstrategy.tech is solid. Book cadence is impressive (one every two to three years). But the flagship brand and its social channels are inconsistent, no visible weekly heartbeat, no scheduled video, no recurring franchise. A trust brand needs a drumbeat.</div>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- 03 THE PATTERN -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-dark">03</span>
+      <span class="section-eyebrow">The Pattern</span>
+    </div>
+    <h2 class="section-title">Two Voices That Don't Meet Yet</h2>
+    <p class="section-subtitle">The thread that connects everything above.</p>
+  </div>
+
+  <div class="section-block">
+    <p>General Informatics has two things most MSPs never get: a CEO with a real personal brand, and a company with real customer stories. Three published books. Board appointments. A distinguished alumni award. Case studies with named customers and specific outcomes.</p>
+    <p>But they live on separate shelves. The company's content is written for procurement. Your authority is written for readers and audiences. The space in between, where a buyer in a regulated vertical watches a short video and decides <strong>"these are the people I trust with my infrastructure,"</strong> is empty.</p>
+    <p>This is the opportunity. Not more content. Video that connects the two voices into one.</p>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- 04 GAPS -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">04</span>
+      <span class="section-eyebrow">The Gaps</span>
+    </div>
+    <h2 class="section-title">Three Opportunities, In Priority Order</h2>
+    <p class="section-subtitle">Each of these is a gap today and a compounding advantage once closed.</p>
+  </div>
+
+  <div class="section-block">
+    <div class="gap-item">
+      <span class="gap-badge critical">Critical</span>
+      <div>
+        <div class="gap-title">No Founder Voice On Camera</div>
+        <div class="gap-desc">You are the most valuable authority asset General Informatics has, and you are not on video anywhere. For a 3x author, board-appointed, executive-accomplished CEO, this is the single largest credibility gap we found. Security and IT buyers do not buy bundles. They buy the people behind them.</div>
+      </div>
+    </div>
+    <div class="gap-item">
+      <span class="gap-badge critical">Critical</span>
+      <div>
+        <div class="gap-title">Customer Stories Trapped In Text</div>
+        <div class="gap-desc">Debbie Hightower's quote would be a 60-second film with an order-of-magnitude higher emotional payload. Baton Rouge Chamber, ThreatWatch, and Hissho Sushi are real transformations sitting in paragraph form. Each one is a case-study film waiting to be shot.</div>
+      </div>
+    </div>
+    <div class="gap-item">
+      <span class="gap-badge moderate">Moderate</span>
+      <div>
+        <div class="gap-title">Authority Platforms Disconnected</div>
+        <div class="gap-desc">Your books, LinkedIn, itstrategy.tech, and geninf.com are all building authority, but each for itself. A single video series, anchored on you, becomes the hub all four platforms can point to.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- 05 AN EXAMPLE LEGENDEERING PIECE -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">05</span>
+      <span class="section-eyebrow">An Example Legendeering Piece</span>
+    </div>
+    <h2 class="section-title">A Video We'd Make For General Informatics</h2>
+    <p class="section-subtitle">Not a pitch. One specific concept, fully designed, to show what the first episode could be.</p>
+  </div>
+
+  <div class="concept-card">
+    <div class="concept-eyebrow">Working Title · Pilot Episode</div>
+    <div class="concept-title">Why Trust Isn't A Feature</div>
+    <div class="concept-logline">"Every MSP sells bundles. Debbie didn't buy a bundle. Here's what she actually bought, and why most of our industry can't sell it."</div>
+    <div class="concept-row">
+      <div class="concept-label">Format</div>
+      <div class="concept-value">10-minute single-topic episode. Studio-lit. Single camera on Don. Minimal B-roll. Built to be the pilot of a monthly series.</div>
+    </div>
+    <div class="concept-row">
+      <div class="concept-label">Who's In It</div>
+      <div class="concept-value"><strong>Don Monistere</strong> (primary). <strong>Debbie Hightower</strong>, CAO LeBlanc Pediatrics (cold-open guest, 30 seconds).</div>
+    </div>
+    <div class="concept-row">
+      <div class="concept-label">Cold Open</div>
+      <div class="concept-value">Debbie on camera, delivering the testimonial line verbatim. Hard cut. Don in the studio: "That's the single most important sentence on our website. I want to tell you why most MSPs can't earn it."</div>
+    </div>
+    <div class="concept-row">
+      <div class="concept-label">Arc</div>
+      <div class="concept-value">Three beats. (1) <strong>The feature trap</strong>, every MSP competes on bundles, response SLAs, and logos. (2) <strong>The trust unlock</strong>, what Debbie actually bought was not a bundle. (3) <strong>The system</strong>, how GI builds teams that earn that sentence every day.</div>
+    </div>
+    <div class="concept-row">
+      <div class="concept-label">Where It Lives</div>
+      <div class="concept-value">geninf.com hero, above the fold · new General Informatics YouTube channel (this episode launches it) · Don's LinkedIn and GI company page · 3 clipdowns for IG and X · pull-quote card for a LinkedIn carousel · chapter link in the next itstrategy.tech essay.</div>
+    </div>
+    <div class="concept-row">
+      <div class="concept-label">What It Does</div>
+      <div class="concept-value">When a banking CISO or healthcare COO lands on geninf.com deciding whether to trust the humans behind the contract, this is the first ten minutes they see. Every other asset on the site converts better after it.</div>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- 06 PROOF -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-dark">06</span>
+      <span class="section-eyebrow">Proof</span>
+    </div>
+    <h2 class="section-title">What Video Looks Like When It's Built Right</h2>
+    <p class="section-subtitle">Three industries, three different jobs. One methodology.</p>
+  </div>
+
+  <div class="case-card">
+    <div class="cs-label">Case Study 01 · Nonprofit</div>
+    <div class="cs-name">Elizabeth Seton Children's</div>
+    <div class="cs-stat-strip">
+      <div class="cs-stat-cell"><div class="cs-stat-num">96</div><div class="cs-stat-label">Beds in new young adult center</div></div>
+      <div class="cs-stat-cell"><div class="cs-stat-num">$156M</div><div class="cs-stat-label">Project investment</div></div>
+      <div class="cs-stat-cell"><div class="cs-stat-num">2025</div><div class="cs-stat-label">Year of groundbreaking</div></div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Challenge</div>
+      <div class="cs-section-body">In 2020, Elizabeth Seton Children's launched a capital campaign to fund a $156 million young adult care facility for patients aging out of their pediatric program. They needed video content that would inspire donors, communicate urgency, and sustain momentum across a multi-year campaign.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Approach</div>
+      <div class="cs-section-body">Talex Media produced multiple pieces of informational, inspirational, and commercial fundraising content across the campaign lifecycle. Each piece was designed to give donors a genuine connection to the mission and the people it serves, not just a request for money.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Result</div>
+      <div class="cs-section-body">In August 2025, Elizabeth Seton Children's broke ground on their new 96-bed young adult center in White Plains, NY, the first standalone facility of its kind in the United States, providing care for young adults aged 18 to 35 with complex medical needs. The facility is expected to open in January 2028.</div>
+    </div>
+    <div class="cs-footer-meta">First standalone young adult complex-care facility in the U.S. · 96 beds · $156M · Groundbreaking Aug 2025</div>
+  </div>
+
+  <div class="case-card">
+    <div class="cs-label">Case Study 02 · Enterprise</div>
+    <div class="cs-name">Resorts World New York City</div>
+    <div class="cs-stat-strip">
+      <div class="cs-stat-cell"><div class="cs-stat-num">$5.5B</div><div class="cs-stat-label">Site development investment</div></div>
+      <div class="cs-stat-cell"><div class="cs-stat-num">10+</div><div class="cs-stat-label">Video pieces produced</div></div>
+      <div class="cs-stat-cell"><div class="cs-stat-num">Dec '25</div><div class="cs-stat-label">Gaming license awarded</div></div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Challenge</div>
+      <div class="cs-section-body">In 2025, Resorts World International launched a high-stakes public campaign to secure a New York City commercial gaming license and advance their $5.5B investment to transform their existing casino at Aqueduct Racetrack into a full-scale integrated resort. Their communications needed to be credible, compelling, and precise.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Approach</div>
+      <div class="cs-section-body">Talex Media produced more than 10 distinct pieces of video content spanning community impact narratives, stakeholder communications, and public-facing advocacy. Each piece was built on a story-first foundation designed to move people, not just inform them.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Result</div>
+      <div class="cs-section-body">On December 15, 2025, the NY State Gaming Commission awarded Resorts World NYC one of only three downstate commercial gaming licenses. Talex Media's content supported one of the most consequential licensing decisions in NYC's recent history.</div>
+    </div>
+    <div class="cs-footer-meta">NYC Gaming License Awarded Dec 15, 2025 · 10+ Videos Produced · $5.5B Investment · Spring 2026 Opening</div>
+  </div>
+
+  <div class="case-card">
+    <div class="cs-label">Case Study 03 · Growth Brand</div>
+    <div class="cs-name">Sobo &amp; Sobo LLP</div>
+    <div class="cs-stat-strip">
+      <div class="cs-stat-cell"><div class="cs-stat-num">2020</div><div class="cs-stat-label">Partnership begin date</div></div>
+      <div class="cs-stat-cell"><div class="cs-stat-num">7</div><div class="cs-stat-label">States with Sobo offices</div></div>
+      <div class="cs-stat-cell"><div class="cs-stat-num">5+</div><div class="cs-stat-label">Years of ongoing campaigns</div></div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Challenge</div>
+      <div class="cs-section-body">In 2020, Sobo &amp; Sobo, a New York-based personal injury law firm, engaged Talex Media. They needed commercial video campaigns that could anchor their brand, differentiate them in a competitive legal market, and fuel their growth ambitions across new markets.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Approach</div>
+      <div class="cs-section-body">Since 2020, Talex Media has produced all of Sobo &amp; Sobo's commercial video campaigns, an ongoing, multi-year embedded partnership bringing brand consistency, strategic communication, and production quality to every new market they enter.</div>
+    </div>
+    <div class="cs-section">
+      <div class="cs-section-label">The Result</div>
+      <div class="cs-section-body">Since the partnership began, Sobo &amp; Sobo has grown from a NY-focused firm into a multi-state legal practice with offices in NY, CT, NJ, IL, OH, PA, and WI. Talex Media's campaigns have accompanied every stage of that expansion.</div>
+    </div>
+    <div class="cs-footer-meta">5+ Year Partnership · All Commercial Campaigns · 7 States: NY, CT, NJ, IL, OH, PA, WI</div>
+  </div>
+
+  <div class="cred-row">
+    <span class="cred-chip">2x Emmy Nominated</span>
+    <span class="cred-chip">25 Years Experience</span>
+    <span class="cred-chip">100+ Hours Distributed Globally</span>
+    <span class="cred-chip">BBC · Discovery · NBC Universal</span>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- 07 WHAT WE'D BUILD -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-orange">07</span>
+      <span class="section-eyebrow">For You</span>
+    </div>
+    <h2 class="section-title">The Full Build For General Informatics</h2>
+    <p class="section-subtitle">The video above is one episode. Here's the rest of what we'd make alongside it, tied back to the gaps in section 04.</p>
+  </div>
+
+  <div class="deliverable">
+    <div class="del-header">
+      <div class="del-num">1</div>
+      <div class="del-title">The CEO Series · 12 Episodes a Year</div>
+    </div>
+    <div class="del-body">
+      <p>The monthly franchise that "Why Trust Isn't a Feature" pilots. Don in studio, one topic per episode, translating a perspective from the Enhanced trilogy for an MSP or IT audience.</p>
+      <ul>
+        <li>12 episodes per year, ~10 minutes each, batched (4 episodes per studio day, 3 shoot days per year)</li>
+        <li>Topics sourced from your books, LinkedIn activity, and conversations with your sales team</li>
+        <li>Distribution: geninf.com hero, new YouTube channel, Don's LinkedIn + GI page, 3-4 clipdowns per episode for IG and X</li>
+        <li>Closes gap 01 (founder voice) and gap 03 (authority platforms disconnected)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="deliverable">
+    <div class="del-header">
+      <div class="del-num">2</div>
+      <div class="del-title">Customer Story Films · 3 to 4 Per Year</div>
+    </div>
+    <div class="del-body">
+      <p>Customer on camera, telling their before-and-after as a narrative arc. Not testimonial-as-quote.</p>
+      <ul>
+        <li>Start with Debbie at LeBlanc Pediatrics, the homepage testimonial already becomes the hook</li>
+        <li>Next: the Baton Rouge Chamber "Smart Office" story as a visual transformation piece</li>
+        <li>~2 minutes each, full production, filmed on-location with the customer</li>
+        <li>Distribution: service landing pages, sent by sales pre-call, emailed post-demo</li>
+        <li>Closes gap 02 (customer stories trapped in text)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="deliverable">
+    <div class="del-header">
+      <div class="del-num">3</div>
+      <div class="del-title">Vertical Explainers · 60 to 90 Seconds, One Per Vertical</div>
+    </div>
+    <div class="del-body">
+      <p>Not sales spots. Short "here is how we think about risk in your world" pieces, one per vertical.</p>
+      <ul>
+        <li>Six total: banking, government, healthcare, manufacturing, transportation, education/maritime</li>
+        <li>Filmed in one production block, then used across outbound, vertical landing pages, and sales follow-up</li>
+        <li>Each one opens with a vertical-specific truth, not a product feature</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="deliverable">
+    <div class="del-header">
+      <div class="del-num">4</div>
+      <div class="del-title">Thought Leadership Integration</div>
+    </div>
+    <div class="del-body">
+      <p>Pull the authority you're building on itstrategy.tech back into the flagship brand.</p>
+      <ul>
+        <li>Monthly essay paired with a 5-minute video version, both published on geninf.com</li>
+        <li>Cross-link both directions so itstrategy.tech readers find the video and geninf.com visitors find the depth</li>
+        <li>Closes gap 03 (authority platforms disconnected)</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- NEXT STEP -->
+  <div class="cta-block">
+    <div class="cta-eyebrow">Next Step</div>
+    <h2 class="disp cta-headline">Let's Talk For 15 Minutes</h2>
+    <p class="cta-sub">If any of this resonates, I'd like fifteen minutes to walk you through it live and pressure-test whether this approach is right for General Informatics. No obligation, no pitch deck, just the conversation.</p>
+    <a class="cta-primary" href="https://calendly.com/talextom/touching-base" target="_blank" rel="noopener">Book 15 min with Tom →</a>
+    <div class="cta-reply">Or just reply to my LinkedIn message and we'll pick up the thread there.</div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- FAQ -->
+  <div class="section-intro">
+    <div class="section-intro-row">
+      <span class="sec-pill-dark">FAQ</span>
+      <span class="section-eyebrow">A Few Questions You Might Have</span>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What does a call with you look like?</div>
+    <div class="faq-a">Fifteen minutes. We walk through this document, I answer whatever you want to ask, and we find out if there's a fit. Nothing is sold on the call.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How custom is this audit?</div>
+    <div class="faq-a">Everything in this document is based on your actual public presence. I don't send the same deck to different companies, this one was prepared specifically for General Informatics.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What happens after the call?</div>
+    <div class="faq-a">If there's a fit, we send a formal proposal with tier options (Story at $5,500/month, Series at $20,000/month, Legend at $50,000/month). If not, you leave with a clearer picture of your content opportunity and I wish you well.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Do you only work with large budgets?</div>
+    <div class="faq-a">No. Story is our entry tier at $5,500/month with a six-month minimum. It's built for teams with a story to tell but without production bandwidth yet. The call establishes which tier fits.</div>
+  </div>
+
+  <footer class="site-footer">
+    <span class="footer-brand">Talex Media</span>
+    <div class="footer-links">
+      <a href="https://www.talexmedia.com" target="_blank">talexmedia.com</a>
+      <a href="mailto:solutions@talexmedia.com">solutions@talexmedia.com</a>
+      <a href="https://calendly.com/talextom/touching-base" target="_blank">Book a Call</a>
+    </div>
+    <div class="footer-copy">© 2026 Talex Media LLC · Audit prepared for General Informatics · April 2026</div>
+  </footer>
+
+</div>
+
+<script>
+function poke(){ try { window.parent.postMessage({ type:"wix-iframe-height", height: document.documentElement.scrollHeight }, "*"); } catch(e){} }
+window.addEventListener("load", function(){ if (window.ResizeObserver) new ResizeObserver(poke).observe(document.body); poke(); });
+</script>
+
+</body>
+</html>
