@@ -66,6 +66,11 @@ body{background:var(--bg);min-height:100vh}
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:0.04em;color:var(--o)}
 .stat-label{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--txt3);font-family:'Oswald',sans-serif;font-weight:400}
 
+.source-link{font-size:11px;color:var(--txt3);text-decoration:none;border-bottom:1px dotted var(--border-strong);transition:color 0.15s,border-color 0.15s;white-space:nowrap;margin-left:4px;font-family:'Oswald',sans-serif;letter-spacing:0.04em;position:relative;z-index:2}
+.source-link:hover{color:var(--o);border-bottom-color:var(--o)}
+.source-link::before{content:"↗ "}
+.source-missing{font-size:11px;color:var(--amber);background:var(--amber-bg);border:1px dashed var(--amber-border);padding:1px 6px;border-radius:3px;font-family:'Oswald',sans-serif;letter-spacing:0.06em;text-transform:uppercase;margin-left:4px;position:relative;z-index:2}
+
 .callout{border-left:3px solid var(--o);padding:1rem 1.25rem;background:var(--surface);border-radius:0 8px 8px 0;margin:1.75rem 0}
 .callout p{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:16px;color:var(--txt);line-height:1.75}
 .callout-attr{margin-top:0.6rem;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--o);font-family:'Oswald',sans-serif;font-weight:500}
@@ -258,27 +263,27 @@ body{background:var(--bg);min-height:100vh}
     </div>
     <h1 class="disp hero-title">A Custom Look<br/>At Your Content Presence</h1>
     <div class="italic hero-tagline">Three books of authority. Zero video on the website. Here's the opportunity.</div>
-    <p class="hero-desc">Don, after spending time with General Informatics across LinkedIn, geninf.com, and the broader public footprint, here is the outside-in read. Not a pitch. What we actually saw, where the biggest authority opportunities sit, and what a fifteen-minute conversation could unlock.</p>
+    <p class="hero-desc">Don, after spending time with General Informatics across LinkedIn, geninf.com, and the broader public footprint, here is the outside-in read. What we actually saw, where the biggest authority opportunities sit, and what a fifteen-minute conversation could unlock.</p>
   </header>
 
   <div class="stat-strip">
     <div class="stat-cell">
-      <div class="stat-num">7</div>
-      <div class="stat-label">Offices Across LA, AL, NC, TX</div>
+      <div class="stat-num">25</div>
+      <div class="stat-label">Years In Business (Founded 2001)</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Books Published Since 2017</div>
+      <div class="stat-num">6.3K</div>
+      <div class="stat-label">LinkedIn Followers</div>
     </div>
     <div class="stat-cell">
-      <div class="stat-num">0</div>
-      <div class="stat-label">Videos On geninf.com</div>
+      <div class="stat-num">2</div>
+      <div class="stat-label">Seasons Of The Grind · Don On Camera</div>
     </div>
   </div>
 
   <div class="callout">
-    <p>"It's not just a phone number. That means the world to me, that I'm able to talk to a human, explain what's going on, and they are going to take care of my problem."</p>
-    <div class="callout-attr">Debbie Hightower, CAO · LeBlanc Pediatrics · <a href="https://geninf.com" target="_blank" rel="noopener">geninf.com</a></div>
+    <p>"It's not just a phone number. That means the world to me, that I'm able to talk to a human, explain to them what's going on, and they are going to take care of my problem."</p>
+    <div class="callout-attr">Debbie Hightower, Chief Administrative Officer · LeBlanc Pediatrics · <a href="https://geninf.com" target="_blank" rel="noopener">geninf.com homepage</a></div>
   </div>
 
   <div class="byline">
@@ -294,7 +299,7 @@ body{background:var(--bg);min-height:100vh}
 
   <div class="section-block">
     <p>Hi Don, my name is Tom Langan. I'm the founder of Talex Media, and before this I spent 25 years directing content for the BBC, Discovery, and NBC Universal.</p>
-    <p>What follows is an outside-in read on General Informatics' content presence. It's not a pitch. It's what we actually saw after time with your channels, and where we'd start if we were working together.</p>
+    <p>What follows is an outside-in read on General Informatics' content presence. It's what we actually saw after time with your channels, and where we'd start if we were working together.</p>
   </div>
 
   <hr class="rule-orange"/>
@@ -321,7 +326,7 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Website</span>
           <span class="channel-handle">geninf.com</span>
         </div>
-        <div class="channel-snippet"><em>"Complex IT Made Simple."</em> Four service bundles. Six verticals. Seven offices. Debbie Hightower's testimonial is the single most compelling line above the fold, and it's trapped in text.</div>
+        <div class="channel-snippet">Your hero reads <em>"Let us focus on your technology, so you can focus on your business."</em> The homepage surfaces three customer stories: The Celtic Group (AI transformation), LeBlanc Pediatrics (customer service), Hissho Sushi (data analytics). Every one of them is text. Debbie's quote is the single most compelling line above the fold, and it's trapped in a callout. <a class="source-link" href="https://geninf.com" target="_blank" rel="noopener">source: geninf.com</a></div>
       </div>
     </div>
 
@@ -335,7 +340,7 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">LinkedIn · Personal</span>
           <span class="channel-handle">/in/donaldmonistere</span>
         </div>
-        <div class="channel-snippet">Your About lists three published books, XChange NexGen Advisory Board, and 2022 Distinguished College of Business Alumnus at Southeastern Louisiana. Real authority, in print.</div>
+        <div class="channel-snippet">Your About opens <em>"HIGHLY ACCOMPLISHED EXECUTIVE who leverages proven talent in multimillion-dollar..."</em> All-caps, polished, corporate. 6,000 followers. MBA from Aspen. Recent activity is the <em>"30-Day Executive Reset"</em> series, pulling directly from your Enhanced trilogy. The voice is there in print. It is not yet on the feed. <a class="source-link" href="https://www.linkedin.com/in/donaldmonistere/" target="_blank" rel="noopener">source: linkedin/in/donaldmonistere</a></div>
       </div>
     </div>
 
@@ -349,7 +354,7 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">LinkedIn · Company</span>
           <span class="channel-handle">/company/general-informatics</span>
         </div>
-        <div class="channel-snippet">The company page leads with GI Guard, Watch, Protect, and Shield+. Clear, but product-first. The voice of the CEO behind the bundles is not in the feed yet.</div>
+        <div class="channel-snippet">6,342 followers. Tagline <em>"Complex IT Made Simple."</em> 51 to 200 employees, founded 2001. Recent posts cover the MTSA maritime rule, the IMS Solutions Group acquisition, SIEM to XDR evolution, healthcare IT. Consistent cadence, real thought leadership, and zero video in the feed. <a class="source-link" href="https://www.linkedin.com/company/general-informatics/" target="_blank" rel="noopener">source: linkedin/company/general-informatics</a></div>
       </div>
     </div>
 
@@ -363,7 +368,7 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Published Books</span>
           <span class="channel-handle">Enhanced Trilogy · 2017–2022</span>
         </div>
-        <div class="channel-snippet">Enhanced Life Performance (2017). Enhanced Executive Performance (2020). Enhanced Corporate Performance (2022). Your most sustained long-form investment. None of it yet exists in video form.</div>
+        <div class="channel-snippet">Enhanced Life Performance (2017). Enhanced Executive Performance (2020). Enhanced Corporate Performance (2022). Three book-length investments in personal authority, the material you already bring to every speaking engagement and advisory board. None of it has been adapted to video yet. <a class="source-link" href="https://www.amazon.com/s?k=Don+Monistere+Enhanced+Performance" target="_blank" rel="noopener">source: Amazon author search</a></div>
       </div>
     </div>
 
@@ -377,7 +382,7 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Blog</span>
           <span class="channel-handle">itstrategy.tech</span>
         </div>
-        <div class="channel-snippet">Consistent cadence, well-written, clearly yours—but published on a second domain. The authority you're building here does not pull back into the flagship brand.</div>
+        <div class="channel-snippet">Tagline <em>"Elevating IT Strategy While Unleashing Business Success."</em> Weekly-to-biweekly posts. Recent headlines: MTSA rule (Apr 21), IMS Solutions Group acquisition (Apr 10), SIEM to MDR to XDR (Mar 31). Authors: Conner LeBlanc, Chris Campbell, Aaron Lancaster, Don. This is also where The Grind and How IT Works episodes live. The authority hub is here, not on the flagship. <a class="source-link" href="https://itstrategy.tech" target="_blank" rel="noopener">source: itstrategy.tech</a></div>
       </div>
     </div>
 
@@ -391,7 +396,7 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Facebook</span>
           <span class="channel-handle">/GeneralInformatics</span>
         </div>
-        <div class="channel-snippet">Page is present, cadence is light. Posts lean announcements. Not yet carrying the personal brand voice you've built in print.</div>
+        <div class="channel-snippet">The Grind Episode One is hosted here as a native video. <span class="source-missing">Needs manual capture</span> We could not verify the rest of the feed without a logged-in session. Tom will confirm before this doc ships. <a class="source-link" href="https://www.facebook.com/GeneralInformatics/" target="_blank" rel="noopener">check facebook.com/GeneralInformatics</a></div>
       </div>
     </div>
 
@@ -405,11 +410,11 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">X / Twitter</span>
           <span class="channel-handle">@GenInf</span>
         </div>
-        <div class="channel-snippet">Handle is taken, but the feed is quiet. No video posts. The platform is increasingly founder-voice driven, your handle is there, your voice isn't yet.</div>
+        <div class="channel-snippet">Handle <em>@GenInf</em> is registered. <span class="source-missing">Needs manual capture</span> X returned a paywall for automated access. Tom will verify activity before this doc ships. <a class="source-link" href="https://x.com/GenInf" target="_blank" rel="noopener">check x.com/GenInf</a></div>
       </div>
     </div>
 
-    <div class="channel-card channel-gap">
+    <div class="channel-card">
       <a class="channel-link" href="https://www.youtube.com/results?search_query=%22General+Informatics%22" target="_blank" rel="noopener" aria-label="Search YouTube for General Informatics"></a>
       <div class="channel-icon youtube">
         <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -417,9 +422,9 @@ body{background:var(--bg);min-height:100vh}
       <div class="channel-body">
         <div class="channel-head">
           <span class="channel-name">YouTube</span>
-          <span class="channel-handle">Gap · No channel detected</span>
+          <span class="channel-handle">Underused</span>
         </div>
-        <div class="channel-snippet">No channel surfaced. The single biggest platform for long-form thought leadership, and the natural home for the CEO series we're about to propose.</div>
+        <div class="channel-snippet">A General Informatics YouTube channel exists; the only surfaceable public video is a 2021 hiring post. The Grind does not appear to be cross-posted here. The single biggest platform for long-form IT thought leadership, unclaimed by the brand that has the content to fill it. <span class="source-missing">Needs manual capture of channel URL</span> <a class="source-link" href="https://www.youtube.com/results?search_query=%22General+Informatics%22" target="_blank" rel="noopener">search YouTube</a></div>
       </div>
     </div>
 
@@ -433,7 +438,7 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Instagram</span>
           <span class="channel-handle">Gap · Not linked</span>
         </div>
-        <div class="channel-snippet">Not linked from geninf.com or your LinkedIn. A gap if you want the visual behind-the-scenes of the team that makes Debbie's promise real.</div>
+        <div class="channel-snippet">Not linked from geninf.com, linkedin.com/company/general-informatics, or itstrategy.tech. No handle surfaced in search. A gap if you want the visual behind-the-scenes of the team that makes Debbie's promise real. <a class="source-link" href="https://www.google.com/search?q=%22General+Informatics%22+site%3Ainstagram.com" target="_blank" rel="noopener">verification search</a></div>
       </div>
     </div>
 
@@ -447,11 +452,15 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Podcasts</span>
           <span class="channel-handle">Gap · No show detected</span>
         </div>
-        <div class="channel-snippet">No podcast found. Your trilogy would adapt naturally to a serialized audio format, same material, a third surface.</div>
+        <div class="channel-snippet">No General Informatics podcast surfaced in Apple Podcasts or Spotify search. Your trilogy adapts naturally to a serialized audio format: same material, a third surface, a fraction of the effort of new production. <a class="source-link" href="https://www.google.com/search?q=%22Don+Monistere%22+OR+%22General+Informatics%22+podcast" target="_blank" rel="noopener">verification search</a></div>
       </div>
     </div>
 
   </div>
+
+  <p style="font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt3);font-size:12px;line-height:1.7;text-align:center;margin:1rem auto 0;max-width:620px">
+    Sources verified on 2026-04-24: <a class="source-link" href="https://geninf.com" target="_blank" rel="noopener" style="margin:0 3px">geninf.com</a> · <a class="source-link" href="https://geninf.com/about-us/" target="_blank" rel="noopener" style="margin:0 3px">about-us</a> · <a class="source-link" href="https://www.linkedin.com/in/donaldmonistere/" target="_blank" rel="noopener" style="margin:0 3px">linkedin/in/donaldmonistere</a> · <a class="source-link" href="https://www.linkedin.com/company/general-informatics/" target="_blank" rel="noopener" style="margin:0 3px">linkedin/company/general-informatics</a> · <a class="source-link" href="https://itstrategy.tech" target="_blank" rel="noopener" style="margin:0 3px">itstrategy.tech</a> · <a class="source-link" href="https://itstrategy.tech/the-grind-trailer/" target="_blank" rel="noopener" style="margin:0 3px">the-grind-trailer</a>
+  </p>
 
   <hr class="rule-orange"/>
 
@@ -469,31 +478,32 @@ body{background:var(--bg);min-height:100vh}
     <div class="audit-step-head">
       <div class="audit-step-num">1</div>
       <div class="audit-step-title">LinkedIn</div>
-      <div class="audit-step-source">linkedin.com/in/donaldmonistere</div>
+      <div class="audit-step-source"><a href="https://www.linkedin.com/in/donaldmonistere/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted">linkedin.com/in/donaldmonistere</a></div>
     </div>
-    <p>Your personal profile reads like a CEO with conviction. Three published books in the Enhanced trilogy. XChange NexGen Advisory Board. 2022 Distinguished College of Business Alumnus at Southeastern Louisiana. You've built serious authority in print.</p>
-    <p>General Informatics' company page covers the fundamentals cleanly: seven locations, the verticals called out, the GI Watch, Guard, Protect, and Shield+ bundles articulated.</p>
-    <p><strong>What's missing:</strong> the voice behind the writing. No video posts from you, no company updates with the CEO on camera. For a 3x author and board-appointed speaker, that channel is very quiet.</p>
+    <p>Your personal profile has the foundation: Enhanced trilogy referenced, MBA from Aspen, 6,000+ followers, and a steady <em>"30-Day Executive Reset"</em> recent activity stream that maps directly to your books. The About opens <em>"HIGHLY ACCOMPLISHED EXECUTIVE who leverages proven talent in multimillion-dollar..."</em>, all-caps, resume voice.</p>
+    <p>General Informatics' company page is in better shape: 6,342 followers, a clear <em>"Complex IT Made Simple"</em> tagline, weekly posts on the MTSA maritime rule, the IMS Solutions Group acquisition, SIEM to XDR evolution. <strong>Strong written thought leadership.</strong></p>
+    <p><strong>What's missing:</strong> no video in either feed. The voice you use on The Grind is sharper than the voice on the About; the video you produce on itstrategy.tech is nowhere on LinkedIn.</p>
   </div>
 
   <div class="audit-step">
     <div class="audit-step-head">
       <div class="audit-step-num">2</div>
       <div class="audit-step-title">geninf.com</div>
-      <div class="audit-step-source">geninf.com</div>
+      <div class="audit-step-source"><a href="https://geninf.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted">geninf.com</a></div>
     </div>
-    <p>"Complex IT Made Simple" is a strong promise. Service architecture is clear: four named bundles, six verticals, seven offices. The case studies (Baton Rouge Chamber, ThreatWatch, Hissho Sushi) are real and specific. Debbie Hightower's testimonial is the single most compelling line on the homepage.</p>
-    <p><strong>What's missing:</strong> every case study is text. Every testimonial is text. There is not a single video on geninf.com, and the "Get to Know the CEO" page has no video of you.</p>
+    <p>The hero is <em>"Let us focus on your technology, so you can focus on your business."</em> Four service bundles (GI Watch, Guard, Protect, Shield+), named case studies for The Celtic Group (AI), LeBlanc Pediatrics (Debbie), and Hissho Sushi (data analytics). The About page credits 25 years in business, Baton Rouge HQ, and a stated mission to <em>"Inspire others to solve business challenges through the best use of technology."</em></p>
+    <p><strong>What's missing:</strong> above the fold, every customer story is text. Debbie's line is a callout quote where it could be a film. Episodes of The Grind and How IT Works used to live on geninf.com subpages; those URLs now 301 redirect to itstrategy.tech. The flagship got emptier over time.</p>
   </div>
 
   <div class="audit-step">
     <div class="audit-step-head">
       <div class="audit-step-num">3</div>
       <div class="audit-step-title">The Broader Footprint</div>
-      <div class="audit-step-source">itstrategy.tech · youtube · ig</div>
+      <div class="audit-step-source"><a href="https://itstrategy.tech" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted">itstrategy.tech</a> · yt · fb · x</div>
     </div>
-    <p>The IT Strategy Tech blog is running on a second domain. Well-written, consistent cadence, but the authority it builds does not pull back into the flagship brand. YouTube: no channel surfaced. Instagram: not linked. X and Facebook are there but light.</p>
-    <p><strong>What's missing:</strong> you have been publishing books since 2017 and speaking through board positions since 2022. The video version of that thought leadership does not yet exist.</p>
+    <p>itstrategy.tech is the content hub: tagline <em>"Elevating IT Strategy While Unleashing Business Success,"</em> weekly-to-biweekly cadence, named authors across the team (Conner LeBlanc, Chris Campbell, Aaron Lancaster, Don). This is also where The Grind lives now: two seasons, Season 2 wrapped October-November 2023. Last published episode is 2.5 years old.</p>
+    <p>YouTube: a channel exists, but the only public video that surfaces in search is a 2021 hiring post. The Grind is not cross-posted. Facebook: The Grind Episode One is hosted as a native video. X and Facebook beyond that are <span class="source-missing">not yet verified</span>.</p>
+    <p><strong>What's missing:</strong> not content production — that exists. Distribution, cadence, and consolidation. The work is being made. It isn't compounding.</p>
   </div>
 
   <hr class="rule-orange"/>
@@ -515,7 +525,7 @@ body{background:var(--bg);min-height:100vh}
         <span class="dim-title">Audience Clarity</span>
         <span class="dim-badge partial">Partial</span>
       </div>
-      <div class="dim-desc">Your site speaks clearly to procurement, service bundles, compliance, office locations. What's less clear is which human inside the buying org is being spoken to. A CISO at a regional bank, a superintendent at a school district, and a harbormaster at a port all need different things. The positioning does not yet distinguish.</div>
+      <div class="dim-desc">Your content speaks to two different audiences at once. The Grind targets <em>"people grinding to execute at a higher level,"</em> the Don Monistere personal-brand audience. geninf.com speaks to procurement at banks, schools, and maritime orgs. Both are valid. The relationship between them is not yet articulated, so a viewer who finds one has no clear path to the other.</div>
     </div>
   </div>
   <div class="dim-card">
@@ -523,9 +533,9 @@ body{background:var(--bg);min-height:100vh}
     <div class="dim-body">
       <div class="dim-head">
         <span class="dim-title">Authenticity &amp; Voice</span>
-        <span class="dim-badge critical">Critical</span>
+        <span class="dim-badge partial">Partial</span>
       </div>
-      <div class="dim-desc">Your voice is one of the strongest assets GI has. Three books, decades on panels, published opinions. And it is completely absent from the company's content. geninf.com has the voice of a vendor. Your LinkedIn has the voice of an author. The space between those two is where the opportunity is.</div>
+      <div class="dim-desc">The Grind shows your real voice: unscripted, opinion-first, coming from a three-book foundation. That is the strongest version of you publicly available. The gap is the LinkedIn About — all-caps executive-bio copy — and geninf.com, where the voice defaults to vendor. The most authentic surface is the one that has paused.</div>
     </div>
   </div>
   <div class="dim-card">
@@ -535,7 +545,7 @@ body{background:var(--bg);min-height:100vh}
         <span class="dim-title">Storytelling Power</span>
         <span class="dim-badge partial">Partial</span>
       </div>
-      <div class="dim-desc">Baton Rouge Chamber, ThreatWatch, Hissho Sushi, these are real, named stories with real transformations. But they are delivered as case-study text: setup, approach, result, in paragraph form. The human drama is implied, not shown. Debbie's quote hints at what the film version could be.</div>
+      <div class="dim-desc">Three named customer stories on the homepage (Celtic Group, LeBlanc Pediatrics, Hissho Sushi) with specific outcomes. Debbie's quote is pure story in four sentences. The investment in the stories exists. The gap is the medium: the emotional weight of each is left on the page as text instead of in a camera.</div>
     </div>
   </div>
   <div class="dim-card">
@@ -545,7 +555,7 @@ body{background:var(--bg);min-height:100vh}
         <span class="dim-title">Generosity &amp; Value</span>
         <span class="dim-badge strong">Strong</span>
       </div>
-      <div class="dim-desc">The three books, the itstrategy.tech blog, and the service depth on geninf.com all signal a brand willing to teach. This is your strongest dimension. The gift here is the video form of what you are already publishing in print.</div>
+      <div class="dim-desc">Three books. Two seasons of The Grind. A weekly blog with named authors from across the team. <em>"How IT Works"</em> as a separate educational series. This is a content brand by MSP standards. Your strongest dimension, and the one every part of this audit builds from.</div>
     </div>
   </div>
   <div class="dim-card">
@@ -553,9 +563,9 @@ body{background:var(--bg);min-height:100vh}
     <div class="dim-body">
       <div class="dim-head">
         <span class="dim-title">Consistency &amp; Systems</span>
-        <span class="dim-badge partial">Partial</span>
+        <span class="dim-badge critical">Critical</span>
       </div>
-      <div class="dim-desc">Blog cadence on itstrategy.tech is solid. Book cadence is impressive (one every two to three years). But the flagship brand and its social channels are inconsistent, no visible weekly heartbeat, no scheduled video, no recurring franchise. A trust brand needs a drumbeat.</div>
+      <div class="dim-desc">The blog is consistent. The video show is not. The Grind Season 2 wrapped November 2023; no new episode has surfaced in 2.5 years. The IMS Solutions Group acquisition (April 10, 2026) is a once-a-decade content event and does not yet have a film. Consistency has been broken on the highest-signal surface you own.</div>
     </div>
   </div>
 
@@ -567,14 +577,15 @@ body{background:var(--bg);min-height:100vh}
       <span class="sec-pill-dark">03</span>
       <span class="section-eyebrow">The Pattern</span>
     </div>
-    <h2 class="section-title">Two Voices That Don't Meet Yet</h2>
+    <h2 class="section-title">You've Already Built The Hard Part</h2>
     <p class="section-subtitle">The thread that connects everything above.</p>
   </div>
 
   <div class="section-block">
-    <p>General Informatics has two things most MSPs never get: a CEO with a real personal brand, and a company with real customer stories. Three published books. Board appointments. A distinguished alumni award. Case studies with named customers and specific outcomes.</p>
-    <p>But they live on separate shelves. The company's content is written for procurement. Your authority is written for readers and audiences. The space in between, where a buyer in a regulated vertical watches a short video and decides <strong>"these are the people I trust with my infrastructure,"</strong> is empty.</p>
-    <p>This is the opportunity. Not more content. Video that connects the two voices into one.</p>
+    <p>Three books. Two seasons of a CEO video series. A weekly blog with named authors. 25 years in business. 6,300 LinkedIn followers. An acquisition closed two weeks ago. The CEO is on camera, in print, and on an industry advisory board.</p>
+    <p>Almost no MSP can say any of this. The work is already in the ground.</p>
+    <p>What happened after Season 2 of The Grind wrapped in November 2023 is the actual pattern. The video show stalled. Episodes migrated from geninf.com to itstrategy.tech. Customer stories stayed in text. The AI story, the IMS Solutions Group acquisition, which is GI's real differentiator for the next three years, became a press release and a blog post, not a Grind episode.</p>
+    <p>The gap is not that GI isn't doing content. It's that GI built momentum and let it freeze. The opportunity here is <strong>revive, elevate, consolidate.</strong> Not invent.</p>
   </div>
 
   <hr class="rule-orange"/>
@@ -593,22 +604,22 @@ body{background:var(--bg);min-height:100vh}
     <div class="gap-item">
       <span class="gap-badge critical">Critical</span>
       <div>
-        <div class="gap-title">No Founder Voice On Camera</div>
-        <div class="gap-desc">You are the most valuable authority asset General Informatics has, and you are not on video anywhere. For a 3x author, board-appointed, executive-accomplished CEO, this is the single largest credibility gap we found. Security and IT buyers do not buy bundles. They buy the people behind them.</div>
+        <div class="gap-title">The Grind Is Frozen</div>
+        <div class="gap-desc">Season 2 wrapped November 2023. Two and a half years since the last episode. The most authoritative asset you built is no longer compounding. Every month without a new episode is a month the show loses the audience it already earned. <a class="source-link" href="https://itstrategy.tech/the-grind-trailer/" target="_blank" rel="noopener">source: The Grind trailer page</a></div>
       </div>
     </div>
     <div class="gap-item">
       <span class="gap-badge critical">Critical</span>
       <div>
-        <div class="gap-title">Customer Stories Trapped In Text</div>
-        <div class="gap-desc">Debbie Hightower's quote would be a 60-second film with an order-of-magnitude higher emotional payload. Baton Rouge Chamber, ThreatWatch, and Hissho Sushi are real transformations sitting in paragraph form. Each one is a case-study film waiting to be shot.</div>
+        <div class="gap-title">Customer Stories Stay In Text</div>
+        <div class="gap-desc">Celtic Group's AI transformation. LeBlanc Pediatrics' trust story (Debbie). Hissho Sushi's data visibility. Three named homepage case studies, all real, all specific, all delivered as written prose. Each one is a customer film waiting to be shot. A video version of these stories converts at a different rate than the written case study. <a class="source-link" href="https://geninf.com" target="_blank" rel="noopener">source: geninf.com homepage</a></div>
       </div>
     </div>
     <div class="gap-item">
       <span class="gap-badge moderate">Moderate</span>
       <div>
-        <div class="gap-title">Authority Platforms Disconnected</div>
-        <div class="gap-desc">Your books, LinkedIn, itstrategy.tech, and geninf.com are all building authority, but each for itself. A single video series, anchored on you, becomes the hub all four platforms can point to.</div>
+        <div class="gap-title">The Flagship Hollowed Out</div>
+        <div class="gap-desc">Video migrated from geninf.com to itstrategy.tech. The 301 redirects go flagship → blog, which is backwards for every SEO, authority, and trust-transfer reason. The flagship should be the hub. Today, it's the referrer. <a class="source-link" href="https://itstrategy.tech/how-it-works-episode-6/" target="_blank" rel="noopener">source: redirected episode page</a></div>
       </div>
     </div>
   </div>
@@ -622,36 +633,36 @@ body{background:var(--bg);min-height:100vh}
       <span class="section-eyebrow">An Example Legendeering Piece</span>
     </div>
     <h2 class="section-title">A Video We'd Make For General Informatics</h2>
-    <p class="section-subtitle">Not a pitch. One specific concept, fully designed, to show what the first episode could be.</p>
+    <p class="section-subtitle">One specific concept, fully designed, to show what the first episode could be.</p>
   </div>
 
   <div class="concept-card">
-    <div class="concept-eyebrow">Working Title · Pilot Episode</div>
+    <div class="concept-eyebrow">Working Title · The Grind · Season 3 · Episode 1</div>
     <div class="concept-title">Why Trust Isn't A Feature</div>
-    <div class="concept-logline">"A monthly show for IT buyers who want to know what the promises on every MSP website actually cost to keep."</div>
+    <div class="concept-logline">"The Grind returns. Season 3 opens with the sentence Debbie Hightower said about us, and what it actually takes to earn it."</div>
     <div class="concept-row">
       <div class="concept-label">Format</div>
-      <div class="concept-value">Ten minutes. One promise per episode. One customer story. One mentor voice. The pilot launches a twelve-episode season.</div>
+      <div class="concept-value">Ten minutes. The Grind's first episode in 2.5 years. Broadcast-grade upgrade to the production standard. Studio cutaways with Don, on-location scenes at LeBlanc Pediatrics with Debbie. A structural shift: Season 3 brings customers in alongside Don.</div>
     </div>
     <div class="concept-row">
       <div class="concept-label">Hero &amp; Mentor</div>
-      <div class="concept-value"><strong>Hero:</strong> Debbie Hightower, CAO, LeBlanc Pediatrics. Debbie carries the story. <strong>Mentor:</strong> Don Monistere. Don translates what happened into a framework the viewer can use Monday morning.</div>
+      <div class="concept-value"><strong>Hero:</strong> Debbie Hightower, Chief Administrative Officer, LeBlanc Pediatrics. Debbie carries the story. <strong>Mentor:</strong> Don Monistere in his established Grind host role. The voice audiences already know, returning.</div>
     </div>
     <div class="concept-row">
       <div class="concept-label">Cold Open</div>
-      <div class="concept-value">Debbie in her practice, unprompted: <em>"It's not just a phone number..."</em> We stay with her a beat longer than expected. Then a quiet cut to Don: <em>"I want to tell you what Debbie just said about us, and why I didn't let her say it until I knew we could earn it."</em></div>
+      <div class="concept-value">Debbie in her clinic, unprompted: <em>"It's not just a phone number..."</em> We stay with her a beat longer than expected. Cut to Don in studio: <em>"This is Season 3 of The Grind. We're back, and we're doing it differently. The first person you're going to hear from isn't me."</em></div>
     </div>
     <div class="concept-row">
       <div class="concept-label">Act I · The Phone</div>
-      <div class="concept-value">Debbie in her practice. Pediatric clinic, small team, IT-dependent operations. Before the incident, she describes what she actually needs from an IT partner, in her own words. Not the feature list on anyone's website.</div>
+      <div class="concept-value">Debbie in her practice. Pediatric clinic, small team, IT-dependent operations. Before the incident, she describes what she actually needs from an IT partner in her own words. Not the feature list on anyone's website.</div>
     </div>
     <div class="concept-row">
       <div class="concept-label">Act II · The Trial</div>
-      <div class="concept-value">The day the system went down. What Debbie did first. Who she called. What was said. What was not in any contract she'd signed, which turned out to be the thing that mattered.</div>
+      <div class="concept-value">The day the system went down. What Debbie did first. Who she called. What was said. What was not in any contract, which turned out to be the thing that mattered.</div>
     </div>
     <div class="concept-row">
       <div class="concept-label">Act III · The Mirror</div>
-      <div class="concept-value">Don in studio. The hard industry question: most MSPs can't earn the sentence Debbie said about us. Why trust isn't a feature and can't be bought. The viewer lands on the unavoidable question: could my current IT partner earn this sentence?</div>
+      <div class="concept-value">Don addresses The Grind's existing audience. The hard industry question: most MSPs can't earn the sentence Debbie said about us. Why trust isn't a feature and can't be bought. The viewer lands on: could my current IT partner earn this sentence?</div>
     </div>
     <div class="concept-row">
       <div class="concept-label">Act IV · The Test</div>
@@ -659,11 +670,11 @@ body{background:var(--bg);min-height:100vh}
     </div>
     <div class="concept-row">
       <div class="concept-label">Where It Lives</div>
-      <div class="concept-value">geninf.com hero above the fold · new General Informatics YouTube channel (this episode launches it) · Don's LinkedIn and GI company page · three clipdowns for IG and X · pull-quote card for a LinkedIn carousel · chapter link in the next itstrategy.tech essay.</div>
+      <div class="concept-value">geninf.com hero above the fold (moved back from itstrategy.tech) · General Informatics YouTube channel (activated as the canonical Grind home) · Don's LinkedIn and the GI company page · three clipdowns for IG and X · pull-quote carousel for LinkedIn · a chapter link from the next itstrategy.tech essay.</div>
     </div>
     <div class="concept-row">
       <div class="concept-label">What The Viewer Gets</div>
-      <div class="concept-value">A mental model for evaluating trust in IT partnerships. A vocabulary for asking harder questions in every vendor meeting. Ten minutes that replace the pitch deck. What General Informatics gets is a downstream effect: every asset on the site converts better because every asset now sits on a trust foundation that didn't exist before.</div>
+      <div class="concept-value">A mental model for evaluating trust in IT partnerships. A vocabulary for asking harder questions in every vendor meeting. Ten minutes that replace a pitch deck. For General Informatics: Season 3 opens with customer-led evidence instead of a product claim, and every asset on the site converts better because it sits on that foundation.</div>
     </div>
   </div>
 
@@ -673,9 +684,9 @@ body{background:var(--bg);min-height:100vh}
   <div class="section-intro">
     <div class="section-intro-row">
       <span class="sec-pill-dark">06</span>
-      <span class="section-eyebrow">Proof</span>
+      <span class="section-eyebrow">Past Clients</span>
     </div>
-    <h2 class="section-title">What Video Looks Like When It's Built Right</h2>
+    <h2 class="section-title">What Video Can Do When It's Done Right</h2>
     <p class="section-subtitle">Three industries, three different jobs. One methodology.</p>
   </div>
 
@@ -770,15 +781,15 @@ body{background:var(--bg);min-height:100vh}
   <div class="deliverable">
     <div class="del-header">
       <div class="del-num">1</div>
-      <div class="del-title">The CEO Series · 12 Episodes a Year</div>
+      <div class="del-title">Revive The Grind · Season 3</div>
     </div>
     <div class="del-body">
-      <p>The monthly franchise that "Why Trust Isn't a Feature" pilots. Don in studio, one topic per episode, translating a perspective from the Enhanced trilogy for an MSP or IT audience.</p>
+      <p>Resume the show you already built. New production standard (broadcast-grade) and a structural shift that brings customers in alongside Don.</p>
       <ul>
         <li>12 episodes per year, ~10 minutes each, batched (4 episodes per studio day, 3 shoot days per year)</li>
-        <li>Topics sourced from your books, LinkedIn activity, and conversations with your sales team</li>
-        <li>Distribution: geninf.com hero, new YouTube channel, Don's LinkedIn + GI page, 3-4 clipdowns per episode for IG and X</li>
-        <li>Closes gap 01 (founder voice) and gap 03 (authority platforms disconnected)</li>
+        <li>Season 3 opens with the Debbie film (the Concept Card above)</li>
+        <li>Production upgrade: multi-cam, cinematic lighting, on-location customer footage, sound mix to broadcast spec</li>
+        <li>Closes Gap 01 (The Grind Is Frozen)</li>
       </ul>
     </div>
   </div>
@@ -786,16 +797,17 @@ body{background:var(--bg);min-height:100vh}
   <div class="deliverable">
     <div class="del-header">
       <div class="del-num">2</div>
-      <div class="del-title">Customer Story Films · 3 to 4 Per Year</div>
+      <div class="del-title">Customer Story Films · 3 To 4 Per Year</div>
     </div>
     <div class="del-body">
-      <p>Customer on camera, telling their before-and-after as a narrative arc. Not testimonial-as-quote.</p>
+      <p>Dedicated films that bring the three homepage case studies to life. Customer on camera, telling their before-and-after as a narrative arc. Not testimonial-as-quote.</p>
       <ul>
-        <li>Start with Debbie at LeBlanc Pediatrics, the homepage testimonial already becomes the hook</li>
-        <li>Next: the Baton Rouge Chamber "Smart Office" story as a visual transformation piece</li>
-        <li>~2 minutes each, full production, filmed on-location with the customer</li>
+        <li>Start with Debbie at LeBlanc Pediatrics — her quote already works as the cold open</li>
+        <li>Next: The Celtic Group's AI transformation (timely given the IMS Solutions Group acquisition)</li>
+        <li>Third: Hissho Sushi's data analytics story (visual, multi-location, retail-grade)</li>
+        <li>~2 minutes each, on-location, customer as hero, Don in mentor role</li>
         <li>Distribution: service landing pages, sent by sales pre-call, emailed post-demo</li>
-        <li>Closes gap 02 (customer stories trapped in text)</li>
+        <li>Closes Gap 02 (Customer Stories Stay In Text)</li>
       </ul>
     </div>
   </div>
@@ -803,14 +815,15 @@ body{background:var(--bg);min-height:100vh}
   <div class="deliverable">
     <div class="del-header">
       <div class="del-num">3</div>
-      <div class="del-title">Vertical Explainers · 60 to 90 Seconds, One Per Vertical</div>
+      <div class="del-title">Consolidate The Flagship</div>
     </div>
     <div class="del-body">
-      <p>Not sales spots. Short "here is how we think about risk in your world" pieces, one per vertical.</p>
+      <p>Move the video hub back to geninf.com from itstrategy.tech, where it belongs. Rewire the authority flow.</p>
       <ul>
-        <li>Six total: banking, government, healthcare, manufacturing, transportation, education/maritime</li>
-        <li>Filmed in one production block, then used across outbound, vertical landing pages, and sales follow-up</li>
-        <li>Each one opens with a vertical-specific truth, not a product feature</li>
+        <li>geninf.com hero becomes the Grind player plus the latest customer film</li>
+        <li>itstrategy.tech stays as the deep-dive written blog, feeding the video content instead of competing with it</li>
+        <li>Reverse the 301 redirects: itstrategy.tech/the-grind-... → geninf.com/the-grind-... (flagship as canonical)</li>
+        <li>Closes Gap 03 (The Flagship Hollowed Out)</li>
       </ul>
     </div>
   </div>
@@ -818,14 +831,15 @@ body{background:var(--bg);min-height:100vh}
   <div class="deliverable">
     <div class="del-header">
       <div class="del-num">4</div>
-      <div class="del-title">Thought Leadership Integration</div>
+      <div class="del-title">The IMS Acquisition Story</div>
     </div>
     <div class="del-body">
-      <p>Pull the authority you're building on itstrategy.tech back into the flagship brand.</p>
+      <p>The IMS Solutions Group acquisition (April 10) is a once-a-decade event. The story is already overdue for the medium it deserves.</p>
       <ul>
-        <li>Monthly essay paired with a 5-minute video version, both published on geninf.com</li>
-        <li>Cross-link both directions so itstrategy.tech readers find the video and geninf.com visitors find the depth</li>
-        <li>Closes gap 03 (authority platforms disconnected)</li>
+        <li>Announcement film: Don on camera, not a text press release. What the acquisition means and why now.</li>
+        <li>Explainer piece: <em>"Why AI, Why Now, What Changes For Our Clients."</em> Audience-first, vendor-agnostic language on the shift.</li>
+        <li>Customer-facing short: one named client talking about what the AI capability unlocks for them.</li>
+        <li>All three published as Grind Season 3 content and companion short-form clipdowns</li>
       </ul>
     </div>
   </div>
@@ -865,11 +879,11 @@ body{background:var(--bg);min-height:100vh}
   </div>
   <div class="faq-item">
     <div class="faq-q">What happens after the call?</div>
-    <div class="faq-a">If there's a fit, we send a formal proposal with tier options (Story at $5,500/month, Series at $20,000/month, Legend at $50,000/month). If not, you leave with a clearer picture of your content opportunity and I wish you well.</div>
+    <div class="faq-a">If there's a fit, we send a formal proposal tailored to your team, your audience, and the goals you described. If not, you leave with a clearer picture of your content opportunity and I wish you well.</div>
   </div>
   <div class="faq-item">
-    <div class="faq-q">Do you only work with large budgets?</div>
-    <div class="faq-a">No. Story is our entry tier at $5,500/month with a six-month minimum. It's built for teams with a story to tell but without production bandwidth yet. The call establishes which tier fits.</div>
+    <div class="faq-q">How is your approach different from a typical video agency?</div>
+    <div class="faq-a">We start with the audience, not the camera. Before any production decision, we map who you're speaking to, what they need from you, and what shift we're trying to produce in them. Format and craft follow from there. This is what we mean by Legendeering.</div>
   </div>
 
   <footer class="site-footer">
