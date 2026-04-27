@@ -177,9 +177,14 @@ body{background:var(--bg);min-height:100vh}
 .channel-handle{font-size:11px;color:var(--txt3);font-family:'Oswald',sans-serif;letter-spacing:0.04em}
 .channel-snippet{font-size:13px;color:var(--txt2);line-height:1.55}
 .channel-snippet em{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt)}
+.channel-snippet ul{list-style:none;padding:0;margin:0 0 6px 0}
+.channel-snippet ul li{position:relative;padding-left:14px;margin-bottom:3px}
+.channel-snippet ul li::before{content:"·";position:absolute;left:4px;top:-2px;color:var(--o);font-weight:700;font-size:16px;line-height:1}
+.channel-snippet ul li:last-child{margin-bottom:0}
 .channel-gap{background:transparent;border-style:dashed;border-color:var(--border-strong)}
 .channel-gap .channel-icon svg{fill:var(--txt3);opacity:0.55}
 .channel-gap .channel-snippet{color:var(--txt3)}
+.channel-gap .channel-snippet ul li::before{color:var(--txt3)}
 
 .video-embed-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;background:var(--txt);margin-bottom:0.75rem;border:1px solid var(--border)}
 .video-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
@@ -324,7 +329,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Website</span>
           <span class="channel-handle">geninf.com</span>
         </div>
-        <div class="channel-snippet">Your hero reads <em>"Let us focus on your technology, so you can focus on your business."</em> The homepage surfaces three customer stories: The Celtic Group (AI transformation), LeBlanc Pediatrics (customer service), Hissho Sushi (data analytics). Every one of them is text. Debbie's quote is the single most compelling line above the fold, and it's trapped in a callout. <a class="source-link" href="https://geninf.com" target="_blank" rel="noopener">source: geninf.com</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>Three customer stories above the fold: Celtic Group, LeBlanc Pediatrics, Hissho Sushi. All text.</li>
+            <li>Debbie's quote is the single most compelling line on the page. It's trapped in a callout.</li>
+          </ul>
+          <a class="source-link" href="https://geninf.com" target="_blank" rel="noopener">source: geninf.com</a>
+        </div>
       </div>
     </div>
 
@@ -338,7 +349,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">LinkedIn · Personal</span>
           <span class="channel-handle">/in/donaldmonistere</span>
         </div>
-        <div class="channel-snippet">Your About opens <em>"HIGHLY ACCOMPLISHED EXECUTIVE who leverages proven talent in multimillion-dollar..."</em> All-caps, polished, corporate. 6,000 followers. MBA from Aspen. Recent activity is the <em>"30-Day Executive Reset"</em> series, pulling directly from your Enhanced trilogy. The voice is there in print. It is not yet on the feed. <a class="source-link" href="https://www.linkedin.com/in/donaldmonistere/" target="_blank" rel="noopener">source: linkedin/in/donaldmonistere</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>6,000 followers. About opens <em>"HIGHLY ACCOMPLISHED EXECUTIVE..."</em> All-caps, resume voice.</li>
+            <li>Recent activity: the <em>"30-Day Executive Reset"</em> series, pulled from your Enhanced trilogy.</li>
+          </ul>
+          <a class="source-link" href="https://www.linkedin.com/in/donaldmonistere/" target="_blank" rel="noopener">source: linkedin/in/donaldmonistere</a>
+        </div>
       </div>
     </div>
 
@@ -352,7 +369,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">LinkedIn · Company</span>
           <span class="channel-handle">/company/general-informatics</span>
         </div>
-        <div class="channel-snippet">6,342 followers. Tagline <em>"Complex IT Made Simple."</em> 51 to 200 employees, founded 2001. Recent posts cover the MTSA maritime rule, the IMS Solutions Group acquisition, SIEM to XDR evolution, healthcare IT. Consistent cadence, real thought leadership, and zero video in the feed. <a class="source-link" href="https://www.linkedin.com/company/general-informatics/" target="_blank" rel="noopener">source: linkedin/company/general-informatics</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>6,342 followers. Tagline <em>"Complex IT Made Simple."</em> Consistent posting cadence.</li>
+            <li>Real thought leadership in print: MTSA, the IMS acquisition, SIEM to XDR. Zero video in the feed.</li>
+          </ul>
+          <a class="source-link" href="https://www.linkedin.com/company/general-informatics/" target="_blank" rel="noopener">source: linkedin/company/general-informatics</a>
+        </div>
       </div>
     </div>
 
@@ -366,7 +389,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Published Books</span>
           <span class="channel-handle">Enhanced Trilogy · 2017-2022</span>
         </div>
-        <div class="channel-snippet">Enhanced Life Performance (2017). Enhanced Executive Performance (2020). Enhanced Corporate Performance (2022). Three book-length investments in personal authority, the material you already bring to every speaking engagement and advisory board. None of it has been adapted to video yet. <a class="source-link" href="https://www.amazon.com/s?k=Donald+Monistere+Enhanced+Performance" target="_blank" rel="noopener">source: Amazon author search</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>Enhanced Life (2017), Executive (2020), Corporate (2022). Three book-length investments in personal authority.</li>
+            <li>None of it has been adapted to video yet.</li>
+          </ul>
+          <a class="source-link" href="https://www.amazon.com/s?k=Donald+Monistere+Enhanced+Performance" target="_blank" rel="noopener">source: Amazon author search</a>
+        </div>
       </div>
     </div>
 
@@ -380,7 +409,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Blog</span>
           <span class="channel-handle">itstrategy.tech</span>
         </div>
-        <div class="channel-snippet">Tagline <em>"Elevating IT Strategy While Unleashing Business Success."</em> Weekly-to-biweekly posts. Recent headlines: MTSA rule (Apr 21), IMS Solutions Group acquisition (Apr 10), SIEM to MDR to XDR (Mar 31). Authors: Conner LeBlanc, Chris Campbell, Aaron Lancaster, Donald. This is also where The Grind and How IT Works episodes live. The authority hub is here, not on the flagship. <a class="source-link" href="https://itstrategy.tech" target="_blank" rel="noopener">source: itstrategy.tech</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>Weekly-to-biweekly posts. Named authors: Conner LeBlanc, Chris Campbell, Aaron Lancaster, Donald.</li>
+            <li>This is also where The Grind and How IT Works live. The authority hub is here, not on the flagship.</li>
+          </ul>
+          <a class="source-link" href="https://itstrategy.tech" target="_blank" rel="noopener">source: itstrategy.tech</a>
+        </div>
       </div>
     </div>
 
@@ -394,7 +429,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Facebook</span>
           <span class="channel-handle">/GeneralInformatics</span>
         </div>
-        <div class="channel-snippet">673 followers. Posts largely sync from itstrategy.tech: the MTSA maritime rule, the #WisdomWednesday series on personal IT support, a healthcare piece. The Grind Episode One is hosted here as a native video. Cross-posting is steady; the account follows itstrategy.tech's rhythm instead of building a native Facebook community. <a class="source-link" href="https://www.facebook.com/GeneralInformatics/" target="_blank" rel="noopener">source: facebook.com/GeneralInformatics</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>673 followers. Posts mostly sync from itstrategy.tech.</li>
+            <li>The Grind Episode One lives here as native video. The rest of the channel does not.</li>
+          </ul>
+          <a class="source-link" href="https://www.facebook.com/GeneralInformatics/" target="_blank" rel="noopener">source: facebook.com/GeneralInformatics</a>
+        </div>
       </div>
     </div>
 
@@ -408,7 +449,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">X / Twitter</span>
           <span class="channel-handle">@GenInf</span>
         </div>
-        <div class="channel-snippet">343 followers. 1,364 posts. Joined September 2009, 17 years on the platform. Text-only feed: phishing, ransomware, vCISO, compliance, hashtag-driven. No video. <strong>Last post: September 17, 2025.</strong> Seven months of silence on an account that has been running since 2009. <a class="source-link" href="https://x.com/GenInf" target="_blank" rel="noopener">source: x.com/GenInf</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>343 followers. 1,364 posts. 17 years on the platform.</li>
+            <li><strong>Last post: September 17, 2025.</strong> Seven months of silence.</li>
+          </ul>
+          <a class="source-link" href="https://x.com/GenInf" target="_blank" rel="noopener">source: x.com/GenInf</a>
+        </div>
       </div>
     </div>
 
@@ -422,7 +469,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">YouTube</span>
           <span class="channel-handle">@generalinformatics · since 2013</span>
         </div>
-        <div class="channel-snippet"><strong>57 videos. 34 subscribers. 2,923 total lifetime views.</strong> <em>"More than A Phone Number"</em> (Debbie's film, May 2024): 79 views. Tacala partnership film (May 2024): 79 views. FC Dallas (Oct 2025): 17 views. Recent AI content (Feb, Mar, Apr 2026): 6 to 11 views each. The content is being made. The community is not being built. <a class="source-link" href="https://www.youtube.com/@generalinformatics/videos" target="_blank" rel="noopener">source: youtube.com/@generalinformatics</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li><strong>57 videos. 34 subscribers. 2,923 total lifetime views.</strong> Debbie's film, 79 views in two years.</li>
+            <li>The content is being made. The community is not being built.</li>
+          </ul>
+          <a class="source-link" href="https://www.youtube.com/@generalinformatics/videos" target="_blank" rel="noopener">source: youtube.com/@generalinformatics</a>
+        </div>
       </div>
     </div>
 
@@ -436,7 +489,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Instagram</span>
           <span class="channel-handle">Gap · Not linked</span>
         </div>
-        <div class="channel-snippet">Not linked from geninf.com, linkedin.com/company/general-informatics, or itstrategy.tech. No handle surfaced in search. A gap if you want the visual behind-the-scenes of the team that makes Debbie's promise real. <a class="source-link" href="https://www.google.com/search?q=%22General+Informatics%22+site%3Ainstagram.com" target="_blank" rel="noopener">verification search</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>Not linked from geninf.com, the LinkedIn company page, or itstrategy.tech. No handle in search.</li>
+            <li>A gap if you want the visual behind-the-scenes of the team that makes Debbie's promise real.</li>
+          </ul>
+          <a class="source-link" href="https://www.google.com/search?q=%22General+Informatics%22+site%3Ainstagram.com" target="_blank" rel="noopener">verification search</a>
+        </div>
       </div>
     </div>
 
@@ -450,7 +509,13 @@ body{background:var(--bg);min-height:100vh}
           <span class="channel-name">Podcasts</span>
           <span class="channel-handle">Gap · No show detected</span>
         </div>
-        <div class="channel-snippet">No General Informatics podcast surfaced in Apple Podcasts or Spotify search. Your trilogy adapts naturally to a serialized audio format: same material, a third surface, a fraction of the effort of new production. <a class="source-link" href="https://www.google.com/search?q=%22Donald+Monistere%22+OR+%22General+Informatics%22+podcast" target="_blank" rel="noopener">verification search</a></div>
+        <div class="channel-snippet">
+          <ul>
+            <li>No show surfaced in Apple Podcasts or Spotify search.</li>
+            <li>Your trilogy adapts naturally to serialized audio: same material, a third surface.</li>
+          </ul>
+          <a class="source-link" href="https://www.google.com/search?q=%22Donald+Monistere%22+OR+%22General+Informatics%22+podcast" target="_blank" rel="noopener">verification search</a>
+        </div>
       </div>
     </div>
 
