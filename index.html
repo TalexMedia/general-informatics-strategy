@@ -133,6 +133,17 @@ body{background:var(--bg);min-height:100vh}
 .idea-tag a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--o)}
 .idea-tag a:hover{border-bottom-style:solid}
 
+.whats-inside{margin:0.5rem 0 1rem}
+.wi-heading{font-family:'Oswald',sans-serif;font-weight:600;font-size:18px;color:var(--txt);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1rem;text-align:center}
+.whats-inside-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:560px){.whats-inside-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){.whats-inside-grid{grid-template-columns:1fr}}
+.wi-card{display:block;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.95rem 1rem;text-decoration:none;color:inherit;transition:border-color 0.15s,background 0.15s}
+.wi-card:hover{border-color:var(--o);background:#FCFAF7}
+.wi-num{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--o);line-height:1;letter-spacing:0.04em;margin-bottom:8px}
+.wi-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;color:var(--txt);letter-spacing:0.04em;margin-bottom:5px;line-height:1.3;text-transform:uppercase}
+.wi-desc{font-size:12.5px;color:var(--txt2);line-height:1.55}
+
 .deliverable{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:1rem;overflow:hidden}
 .del-header{display:flex;align-items:center;gap:12px;padding:1rem 1.4rem;border-bottom:1px solid var(--border);background:var(--surface2)}
 .del-num{width:28px;height:28px;border-radius:50%;background:var(--o);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:15px;flex-shrink:0}
@@ -329,6 +340,42 @@ body{background:var(--bg);min-height:100vh}
     <p>I've spent 25 years in video and television production as a Director of Photography, Producer, and Showrunner, earning two Emmy nominations and leading multi-million dollar productions for the BBC, NBCUniversal, and Discovery filming all over the world from the Arctic Circle to sub-Saharan Africa.</p>
     <p>My job was, and still is, to make video that people actually want to watch.</p>
     <p>In order to do this (create audience first content that leaves people feeling good about supporting your brand and your mission) we need to always take your broader public footprint into account. What follows here is our honest take on what we saw, and where we'd start if we were working together.</p>
+  </div>
+
+  <div class="whats-inside">
+    <h2 class="wi-heading">What's Inside</h2>
+    <div class="whats-inside-grid">
+      <a class="wi-card" href="#sec-dimensions">
+        <div class="wi-num">01</div>
+        <div class="wi-title">The Five Dimensions</div>
+        <div class="wi-desc">The foundation every piece of content has to satisfy</div>
+      </a>
+      <a class="wi-card" href="#sec-quality">
+        <div class="wi-num">02</div>
+        <div class="wi-title">Quality</div>
+        <div class="wi-desc">After the foundation, where craft becomes a multiplier</div>
+      </a>
+      <a class="wi-card" href="#sec-ideas">
+        <div class="wi-num">03</div>
+        <div class="wi-title">Video Ideas</div>
+        <div class="wi-desc">Five concepts we'd make for General Informatics</div>
+      </a>
+      <a class="wi-card" href="#concept">
+        <div class="wi-num">04</div>
+        <div class="wi-title">Idea 1, In Depth</div>
+        <div class="wi-desc">A specific video, designed end to end</div>
+      </a>
+      <a class="wi-card" href="#sec-clients">
+        <div class="wi-num">05</div>
+        <div class="wi-title">Past Clients</div>
+        <div class="wi-desc">What video can do when it's done right</div>
+      </a>
+      <a class="wi-card" href="#sec-faq">
+        <div class="wi-num">FAQ</div>
+        <div class="wi-title">A Few Questions</div>
+        <div class="wi-desc">What you might be wondering</div>
+      </a>
+    </div>
   </div>
 
   <hr class="rule-orange"/>
@@ -554,7 +601,7 @@ body{background:var(--bg);min-height:100vh}
   <hr class="rule-orange"/>
 
   <!-- 01 FIVE DIMENSIONS -->
-  <div class="section-intro">
+  <div class="section-intro" id="sec-dimensions">
     <div class="section-intro-row">
       <span class="sec-pill-orange">01</span>
       <span class="section-eyebrow">The Five Dimensions</span>
@@ -617,7 +664,7 @@ body{background:var(--bg);min-height:100vh}
   <hr class="rule-orange"/>
 
   <!-- 02 QUALITY -->
-  <div class="section-intro">
+  <div class="section-intro" id="sec-quality">
     <div class="section-intro-row">
       <span class="sec-pill-orange">02</span>
       <span class="section-eyebrow">Quality</span>
@@ -634,7 +681,7 @@ body{background:var(--bg);min-height:100vh}
   <hr class="rule-orange"/>
 
   <!-- 03 5 IDEAS FOR VIDEO CONTENT -->
-  <div class="section-intro">
+  <div class="section-intro" id="sec-ideas">
     <div class="section-intro-row">
       <span class="sec-pill-orange">03</span>
       <span class="section-eyebrow">Video Ideas</span>
@@ -737,7 +784,7 @@ body{background:var(--bg);min-height:100vh}
   <hr class="rule-orange"/>
 
   <!-- 05 PROOF -->
-  <div class="section-intro">
+  <div class="section-intro" id="sec-clients">
     <div class="section-intro-row">
       <span class="sec-pill-orange">05</span>
       <span class="section-eyebrow">Past Clients</span>
@@ -836,7 +883,7 @@ body{background:var(--bg);min-height:100vh}
   <hr class="rule-orange"/>
 
   <!-- FAQ -->
-  <div class="section-intro">
+  <div class="section-intro" id="sec-faq">
     <div class="section-intro-row">
       <span class="sec-pill-dark">FAQ</span>
       <span class="section-eyebrow">A Few Questions You Might Have</span>
