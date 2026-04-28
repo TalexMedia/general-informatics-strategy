@@ -118,6 +118,18 @@ body{background:var(--bg);min-height:100vh}
 .gap-title{font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;color:var(--txt);margin-bottom:3px;letter-spacing:0.02em}
 .gap-desc{font-size:13px;color:var(--txt2);line-height:1.65}
 
+.ideas-grid{display:flex;flex-direction:column;gap:0.75rem;margin-top:1rem}
+.idea-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.3rem;display:flex;gap:1.1rem;align-items:flex-start}
+.idea-card-featured{background:rgba(232,90,12,0.05);border-color:var(--o)}
+.idea-num{flex-shrink:0;width:36px;height:36px;background:var(--o);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:18px;display:flex;align-items:center;justify-content:center;border-radius:6px;margin-top:2px;letter-spacing:0.04em}
+.idea-body{flex:1;min-width:0}
+.idea-title{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;color:var(--txt);letter-spacing:0.02em;margin-bottom:6px;line-height:1.35}
+.idea-desc{font-size:13.5px;color:var(--txt2);line-height:1.7}
+.idea-desc em{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt)}
+.idea-tag{margin-top:10px;font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:0.12em;color:var(--o);text-transform:uppercase;font-weight:600}
+.idea-tag a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--o)}
+.idea-tag a:hover{border-bottom-style:solid}
+
 .deliverable{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:1rem;overflow:hidden}
 .del-header{display:flex;align-items:center;gap:12px;padding:1rem 1.4rem;border-bottom:1px solid var(--border);background:var(--surface2)}
 .del-num{width:28px;height:28px;border-radius:50%;background:var(--o);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:15px;flex-shrink:0}
@@ -618,50 +630,71 @@ body{background:var(--bg);min-height:100vh}
 
   <hr class="rule-orange"/>
 
-  <!-- 03 GAPS -->
+  <!-- 03 5 IDEAS FOR VIDEO CONTENT -->
   <div class="section-intro">
     <div class="section-intro-row">
       <span class="sec-pill-orange">03</span>
-      <span class="section-eyebrow">The Gaps</span>
+      <span class="section-eyebrow">Video Ideas</span>
     </div>
-    <h2 class="section-title">Three Opportunities, In Priority Order</h2>
-    <p class="section-subtitle">Each of these is a gap today and a compounding advantage once closed.</p>
+    <h2 class="section-title">5 Ideas For Video Content</h2>
+    <p class="section-subtitle">Five concepts based on what General Informatics already has, or could easily create. Different formats. Different jobs. Same craft standard.</p>
   </div>
 
-  <div class="section-block">
-    <div class="gap-item">
-      <span class="gap-badge critical">Critical</span>
-      <div>
-        <div class="gap-title">57 Videos. 34 People Watching.</div>
-        <div class="gap-desc">The YouTube channel has 57 uploads and 2,923 total lifetime views since 2013. <em>"More than A Phone Number,"</em> Debbie's LeBlanc Pediatrics film from May 2024, has 79 views. The Tacala partnership film, same month: 79 views. FC Dallas (October 2025): 17. Recent AI content (Feb to Apr 2026): 6 to 11 views each. The customer stories that should be converting IT buyers are reaching audiences in the double digits. The craft gap and the discovery gap are separate, and both are wide. <a class="source-link" href="https://www.youtube.com/@generalinformatics/videos" target="_blank" rel="noopener">source: youtube.com/@generalinformatics</a></div>
+  <div class="ideas-grid">
+
+    <div class="idea-card idea-card-featured">
+      <div class="idea-num">1</div>
+      <div class="idea-body">
+        <div class="idea-title">"More Than A Phone Number, Directed"</div>
+        <div class="idea-desc">The customer hero film. Built from the existing May 2024 Debbie / LeBlanc Pediatrics interview plus a return visit eighteen months later. Four acts, broadcast standard, six to eight minutes. Positioned as the anchor video on geninf.com, the one every sales conversation and case study page points back to.</div>
+        <div class="idea-tag"><a href="#concept">↓ Full concept follows in section 04</a></div>
       </div>
     </div>
-    <div class="gap-item">
-      <span class="gap-badge critical">Critical</span>
-      <div>
-        <div class="gap-title">The Show Stopped, The Channel Didn't</div>
-        <div class="gap-desc">The Grind Season 2 Episode Eight was published November 20, 2023. Since then, the YouTube channel has kept uploading at a monthly-ish rhythm: AI explainers, event films, customer features. Good work, but not a show. Viewers returned to The Grind because it was episodic, named, and had a thread. Ad-hoc uploads don't replace that discipline. The series brand you built sits unused. <a class="source-link" href="https://itstrategy.tech/the-grind-trailer/" target="_blank" rel="noopener">source: The Grind trailer</a></div>
+
+    <div class="idea-card">
+      <div class="idea-num">2</div>
+      <div class="idea-body">
+        <div class="idea-title">"The Grind, Season 3"</div>
+        <div class="idea-desc">Restart the show that drove your strongest content from 2017 to 2023. A named, episodic format with a release calendar viewers can trust. Twelve episodes, batched shoot days, broadcast-grade production. The IMS Solutions Group acquisition becomes Episode 2: <em>"Why AI, Why Now, What Changes For Our Clients."</em> Each long-form episode is built to cut down into shorter pieces.</div>
       </div>
     </div>
-    <div class="gap-item">
-      <span class="gap-badge moderate">Moderate</span>
-      <div>
-        <div class="gap-title">The Content Does Not Meet Itself</div>
-        <div class="gap-desc">Blog on itstrategy.tech. Videos on YouTube. Customer cases in text on geninf.com. Each pillar stands alone. The "More Than Just a Phone Number" case study page on geninf.com does not embed the "More than A Phone Number" film on YouTube. 6,342 LinkedIn followers do not get pushed to the channel. The flagship does not surface the work the channel has made. <a class="source-link" href="https://geninf.com" target="_blank" rel="noopener">source: geninf.com cross-referenced with YouTube catalog</a></div>
+
+    <div class="idea-card">
+      <div class="idea-num">3</div>
+      <div class="idea-body">
+        <div class="idea-title">"How IT Works, Reborn"</div>
+        <div class="idea-desc">Standalone explainer series, ninety seconds to three minutes per episode. Each piece answers a specific buyer question: <em>what is XDR, what does an MSP actually do, what does HIPAA-compliant IT really mean.</em> Hosted by named authors across the team (Conner LeBlanc, Chris Campbell, Aaron Lancaster). Built to be repurposed into shorter clips and embedded directly on the related itstrategy.tech blog post.</div>
       </div>
     </div>
+
+    <div class="idea-card">
+      <div class="idea-num">4</div>
+      <div class="idea-body">
+        <div class="idea-title">"The Acquisition Film"</div>
+        <div class="idea-desc">A six to eight minute documentary on the IMS Solutions Group acquisition. The biggest news event the company has had in years currently has a press release and a blog post. The film captures Donald, IMS leadership, and named customers reacting in real time. The kind of once-a-decade story that lives longer when it's properly told.</div>
+      </div>
+    </div>
+
+    <div class="idea-card">
+      <div class="idea-num">5</div>
+      <div class="idea-body">
+        <div class="idea-title">"Enhanced, On Camera"</div>
+        <div class="idea-desc">Adapt your Enhanced trilogy into a serialized lecture series. One five to seven minute episode per principle, in a conversational format that draws on customer examples to illustrate. Three books worth of material translated into the medium where it lands hardest. Cuts down into a library of standalone short-form pieces.</div>
+      </div>
+    </div>
+
   </div>
 
   <hr class="rule-orange"/>
 
   <!-- 04 AN EXAMPLE LEGENDEERING PIECE -->
-  <div class="section-intro">
+  <div class="section-intro" id="concept">
     <div class="section-intro-row">
       <span class="sec-pill-orange">04</span>
-      <span class="section-eyebrow">An Example Legendeering Piece</span>
+      <span class="section-eyebrow">Idea 1, In Depth</span>
     </div>
     <h2 class="section-title">A Video We'd Make For General Informatics</h2>
-    <p class="section-subtitle">One specific concept, fully designed, to show what the first episode could be.</p>
+    <p class="section-subtitle">The full version of idea 1 from above, designed end to end.</p>
   </div>
 
   <div class="concept-card">
@@ -785,89 +818,6 @@ body{background:var(--bg);min-height:100vh}
     <span class="cred-chip">100+ Hours Distributed Globally</span>
     <span class="cred-chip">BBC · Discovery · NBC Universal</span>
   </div>
-
-  <hr class="rule-orange"/>
-
-  <!-- 06 WHAT WE'D BUILD -->
-  <div class="section-intro">
-    <div class="section-intro-row">
-      <span class="sec-pill-orange">06</span>
-      <span class="section-eyebrow">For You</span>
-    </div>
-    <h2 class="section-title">The Full Build For General Informatics</h2>
-    <p class="section-subtitle">The video above is one episode. Here's the rest of what we'd make alongside it, tied back to the gaps in section 03.</p>
-  </div>
-
-  <div class="deliverable">
-    <div class="del-header">
-      <div class="del-num">1</div>
-      <div class="del-title">The Debbie Film, Directed (Anchor Asset)</div>
-    </div>
-    <div class="del-body">
-      <p>Elevate the May 2024 film to broadcast standard and position it as the single anchor video geninf.com points to from every page. The Concept Card above is this deliverable.</p>
-      <ul>
-        <li>Shot-for-shot review of the existing cut; retain the strongest footage</li>
-        <li>New A-camera day with Debbie, eighteen months on. The return visit.</li>
-        <li>Broadcast sound mix, color grade, re-score; six to eight minute final cut</li>
-        <li>Embedded on the "More Than Just a Phone Number" case study page, pinned on the YouTube channel, replacing the static hero on geninf.com</li>
-        <li>Addresses Gap 01 (57 Videos. 34 People Watching.) and Gap 03 (The Content Does Not Meet Itself)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="deliverable">
-    <div class="del-header">
-      <div class="del-num">2</div>
-      <div class="del-title">Customer Film Library Remaster · 4 to 6 Titles</div>
-    </div>
-    <div class="del-body">
-      <p>You have films for Tacala, FC Dallas, Volunteers of America, and others already on the channel. Audit each. Keep the best, remaster, and give the library a consistent look and a shared release plan.</p>
-      <ul>
-        <li>Each title gets the same broadcast-grade treatment as the Debbie anchor</li>
-        <li>Unified title sequence, sound bed, end card</li>
-        <li>Release cadence: one remastered customer film per quarter, published as a named series, not a scattered upload</li>
-        <li>Every customer film embedded on its corresponding geninf.com case study page</li>
-        <li>Addresses Gap 01 (57 Videos. 34 People Watching.) and Gap 03 (The Content Does Not Meet Itself)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="deliverable">
-    <div class="del-header">
-      <div class="del-num">3</div>
-      <div class="del-title">Restart The Grind · As A Series Again</div>
-    </div>
-    <div class="del-body">
-      <p>The channel has kept uploading; The Grind as a show has not. Bring the show back as a named, episodic format with a release calendar viewers can trust.</p>
-      <ul>
-        <li>Season 3: twelve episodes, batched shoot days (four per day, three shoot days per year)</li>
-        <li>Same host (Donald), same mission ("Open 24/7"), broadcast-grade production upgrade</li>
-        <li>Announcement film for the IMS Solutions Group acquisition becomes Episode 2 of Season 3. The <em>"Why AI, Why Now, What Changes For Our Clients"</em> piece lives in the show, not in a press release</li>
-        <li>Addresses Gap 02 (The Show Stopped, The Channel Didn't)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="deliverable">
-    <div class="del-header">
-      <div class="del-num">4</div>
-      <div class="del-title">The Distribution Engine</div>
-    </div>
-    <div class="del-body">
-      <p>The missing piece. Everything above fails if the films keep pulling 79 views. This is the machine that turns 34 subscribers into a community that matches the work.</p>
-      <ul>
-        <li>YouTube channel rebuild: new thumbnails, titles, playlists, channel trailer, end cards routing to the next video</li>
-        <li>Every film gets a clipdown system: three to five short edits per long-form piece, formatted for LinkedIn, Facebook, Instagram, and X</li>
-        <li>geninf.com consolidation: flagship becomes the video hub, case study pages embed the films, hero replaces the static image</li>
-        <li>LinkedIn syndication: Donald and the company page push every new release to the 6,342 followers who already raised their hand</li>
-        <li>Addresses every gap. This is the deliverable that compounds the first three.</li>
-      </ul>
-    </div>
-  </div>
-
-  <p style="font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--txt3);font-size:14px;line-height:1.75;text-align:center;max-width:560px;margin:1.5rem auto 0">
-    This is the high-level build. After the first call, we produce the full <strong style="color:var(--txt2);font-weight:500">Legendeering Strategy Brief</strong>, twelve episodes architected for the season, four-act structure per episode, platform-specific distribution, and a ninety-day action plan keyed to your team.
-  </p>
 
   <hr class="rule-orange"/>
 
